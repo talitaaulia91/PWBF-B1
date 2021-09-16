@@ -19,10 +19,14 @@ Route::get('/welcome', function () {
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about',[
+        "title" => "About"
+    ]);
 });
