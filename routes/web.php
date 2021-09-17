@@ -30,3 +30,10 @@ Route::get('/about', function () {
         "title" => "About"
     ]);
 });
+
+
+Route::get('/account', function () {
+    return view('account',[
+        "title" => "Account"
+    ]);
+});

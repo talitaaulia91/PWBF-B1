@@ -26,6 +26,9 @@
                         <li class="nav-item">
                          <a class="nav-link {{ ($title === 'About' ? 'active' : '' ) }}" href="/about">About Us</a>
                          </li>
+                         <li class="nav-item">
+                         <a class="nav-link {{ ($title === 'Account' ? 'active' : '' ) }}" href="/account">Account</a>
+                         </li>
                      </li>
                  </ul>
              </div>
