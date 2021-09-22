@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
 
 
 Route::get('/', function () {
@@ -35,5 +32,11 @@ Route::get('/about', function () {
 Route::get('/account', function () {
     return view('account',[
         "title" => "Account"
+    ]);
+});
+
+Route::get('/signup', function () {
+    return view('signup',[
+        "title" => "signup"
     ]);
 });
