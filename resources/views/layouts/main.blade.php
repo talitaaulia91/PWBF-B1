@@ -26,9 +26,17 @@
                         <li class="nav-item">
                          <a class="nav-link {{ ($title === 'About' ? 'active' : '' ) }}" href="/about">About Us</a>
                          </li>
-                         <li class="nav-item">
-                         <a class="nav-link {{ ($title === 'Account' ? 'active' : '' ) }}" href="/account">Account</a>
+                         <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                         </a>
+                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                         <li><a class="dropdown-item" href="/signup">Sign Up</a></li>
+                         <li><a class="dropdown-item" href="/login">Log In</a></li>
+                         <li><a class="dropdown-item" href="/logout">Log Out</a></li>
+                         </ul>
                          </li>
+
                      </li>
                  </ul>
              </div>
