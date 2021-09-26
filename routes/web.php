@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\post;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\postController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Home"
-    ]);
-});
+
+
+
+
+Route::get('/', [postController::class, 'index']);
+    
+
+
 
 
 Route::get('/about', function () {
@@ -29,14 +35,32 @@ Route::get('/about', function () {
 });
 
 
+
+
 Route::get('/account', function () {
     return view('account',[
         "title" => "Account"
     ]);
 });
 
+
+
+
 Route::get('/signup', function () {
     return view('signup',[
         "title" => "signup"
     ]);
 });
+
+
+
+Route::get('home/{slug}', function($slug){
+return view ('article',[
+    "title" => "Single Article",
+    "article" => post::find($slug)
+]);
+});
+
+
+
+
