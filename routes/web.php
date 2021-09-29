@@ -26,8 +26,6 @@ Route::get('/', [postController::class, 'index']);
     
 
 
-
-
 Route::get('/about', function () {
     return view('about',[
         "title" => "About"
@@ -35,20 +33,9 @@ Route::get('/about', function () {
 });
 
 
-
-
 Route::get('/account', function () {
     return view('account',[
         "title" => "Account"
-    ]);
-});
-
-
-
-
-Route::get('/signup', function () {
-    return view('signup',[
-        "title" => "signup"
     ]);
 });
 
@@ -60,7 +47,3 @@ return view ('article',[
     "article" => post::find($slug)
 ]);
 });
-
-
-
-

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
      <head>
@@ -11,7 +12,7 @@
       <title>TPQ AL-MUBAROQ | {{ $title }} </title>
         </head>
          <body>
-             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6610f2">
                  <div class="container">
                  <a class="navbar-brand" href="/">TPQ AL-MUBAROQ</a>
                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,3 +64,4 @@
     -->
   </body>
 </html>
+
