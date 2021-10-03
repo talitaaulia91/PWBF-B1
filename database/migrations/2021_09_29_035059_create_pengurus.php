@@ -22,7 +22,7 @@ class CreatePengurus extends Migration
             $table->string('password',15);
             $table->char('aktif',1);
             $table->primary('id_pengurus');
-            $table->timestamps();
+            
         });
     }
 

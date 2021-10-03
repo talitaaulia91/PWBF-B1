@@ -28,7 +28,7 @@ class CreateSantri extends Migration
             $table->date('tgl_Masuk');
             $table->char('aktif', 1);
             $table->primary('id_santri');
-            $table->timestamps();
+           
         });
     }
 

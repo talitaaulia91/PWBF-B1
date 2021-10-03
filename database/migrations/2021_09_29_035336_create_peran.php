@@ -19,7 +19,7 @@ class CreatePeran extends Migration
             $table->string('peran',20);
             $table->char('aktif',1);   
             $table->primary('id_peran');        
-            $table->timestamps();
+           
         });
     }
 
