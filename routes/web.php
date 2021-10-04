@@ -3,6 +3,7 @@
 use App\Models\post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\postController;
+use App\Http\Controllers\SantriController;
 
 
 /*
@@ -22,8 +23,12 @@ use App\Http\Controllers\postController;
 
 
 
-Route::get('/', [postController::class, 'index']);
+// Route::get('/', [postController::class, 'index']);
     
+
+
+
+Route::get('/home', [SantriController::class, 'index']);
 
 
 Route::get('/about', function () {
@@ -41,9 +46,9 @@ Route::get('/account', function () {
 
 
 
-Route::get('home/{slug}', function($slug){
-return view ('article',[
-    "title" => "Single Article",
-    "article" => post::find($slug)
-]);
-});
+// Route::get('home/{slug}', function($slug){
+// return view ('article',[
+//     "title" => "Single Article",
+//     "article" => post::find($slug)
+// ]);
+// });
