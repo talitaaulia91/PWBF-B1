@@ -1,9 +1,10 @@
 <?php
 
-use App\Models\post;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\postController;
 use App\Http\Controllers\SantriController;
+use App\Http\Controllers\signup;
+use App\Http\Controllers\signin;
+
 
 
 /*
@@ -28,27 +29,13 @@ use App\Http\Controllers\SantriController;
 
 
 
-Route::get('/home', [SantriController::class, 'index']);
+Route::get('/', [SantriController::class, 'index']);
 
+Route::get('/signup', [signup::class, 'signup']);
 
-Route::get('/about', function () {
-    return view('about',[
-        "title" => "About"
-    ]);
-});
-
-
-Route::get('/account', function () {
-    return view('account',[
-        "title" => "Account"
-    ]);
-});
+Route::get('/signin', [signin::class, 'signin']);
 
 
 
-// Route::get('home/{slug}', function($slug){
-// return view ('article',[
-//     "title" => "Single Article",
-//     "article" => post::find($slug)
-// ]);
-// });
+
+
