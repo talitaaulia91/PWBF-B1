@@ -9,9 +9,8 @@ use App\Models\santri;
 
 class SantriController extends Controller
 {
-    public function index(){
+    public function santri(){
         $santri = santri::all();
-        return view('home', ['hpos'=>$santri]);
     }
 
 

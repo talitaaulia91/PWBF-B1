@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\signup;
 use App\Http\Controllers\signin;
+use App\Http\Controllers\about;
+use App\Http\Controllers\home;
+use App\Http\Controllers\dashboard;
+use App\Http\Controllers\tables;
 
 
 
@@ -29,11 +33,18 @@ use App\Http\Controllers\signin;
 
 
 
-Route::get('/', [SantriController::class, 'index']);
+Route::get('/', [home::class, 'home']);
 
 Route::get('/signup', [signup::class, 'signup']);
 
 Route::get('/signin', [signin::class, 'signin']);
+
+Route::get('/about', [about::class, 'about']);
+
+Route::get('/dashboard', [dashboard::class, 'dashboard']);
+
+Route::get('/tables', [tables::class, 'tables']);
+
 
 
 

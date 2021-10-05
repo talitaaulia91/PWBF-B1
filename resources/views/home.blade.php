@@ -47,7 +47,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/about">About</a></li>
           <li><a class="nav-link scrollto" href="#features">Features</a></li>
           <li class="dropdown"><a href="#"><span>Get started</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -73,8 +73,8 @@
           <h2>Mencetak insan intelektual dan berakhlak Qur'ani</h2>
           <div><a href="/signup" class="btn-get-started scrollto">Sign up</a></div>
         </div>
-        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 muslim5-01" data-aos="zoom-in" data-aos-delay="150">
-          <img src="assets/img/muslim5-01.png" class="img-fluid animated" alt="">
+        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 muslim1-01" data-aos="zoom-in" data-aos-delay="150">
+          <img src="assets/img/muslim1-01.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -101,7 +101,7 @@
               <li><i class="bi bi-check-circle"></i> Membentuk pribadi muslim sejak dini dengan penekanan akhlakul karimah</li>
               <li><i class="bi bi-check-circle"></i> Menyelenggarakan pendidikan keagamaan di luar baca tulis Al-Quran</li>
             </ul>
-            <a href="#" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
+            <a href="/about" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
           </div>
         </div>
 
@@ -120,7 +120,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column align-items-lg-center">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column align-items-lg-left">
             <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-receipt"></i>
               <h4>Daftar dengan mudah</h4>
@@ -155,8 +155,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Kata Mereka</h2>
+          <p>Kata mereka tentang SI TPQ Al-Mubaroq</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -166,12 +166,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  Saya sangat terbantu dengan adanya website ini. Saya dapat memantau perkembangan anak saya dalam menempuh ilmu di TPQ Al-Mubaroq
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <img src="assets/img/testimonials/boy1-01.png" class="testimonial-img" alt="">
+                <h3>Haikal  Hilmi</h3>
+                <h4>Wali santri</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -179,12 +179,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Website ini memudahkan saya dalam mengakses modul yang dibutuhkan dalam pembelajaran.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <img src="assets/img/testimonials/boy2-01.png" class="testimonial-img" alt="">
+                <h3>Ilham Dwi Kurniawan</h3>
+                <h4>Santri/2020</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -192,12 +192,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Akses modul, materi, dan tugas sekarang bisa di mana saja!
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <img src="assets/img/testimonials/girl1-01.png" class="testimonial-img" alt="">
+                <h3>Safira Amanta Safa</h3>
+                <h4>Santri/2020</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -205,12 +205,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore.
+                  Sangat fleksibel dan mudah dimengerti, fitur lengkap dan mudah diakses.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <img src="assets/img/testimonials/boy1-01.png" class="testimonial-img" alt="">
+                <h3>Achmad Agung</h3>
+                <h4>Wali santri</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -218,12 +218,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa.
+                 Penyampaian materi jauh lebih mudah dengan fitur yang disediakan website ini.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <img src="assets/img/testimonials/girl2-01.png" class="testimonial-img" alt="">
+                <h3>intan Cahyani</h3>
+                <h4>Ustadzah</h4>
               </div>
             </div><!-- End testimonial item -->
 

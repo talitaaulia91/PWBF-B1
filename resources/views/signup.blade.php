@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Form-v10 by Colorlib</title>
+	<title>TPQ Al-Mubaroq | Signup</title>
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Font-->
@@ -18,11 +18,11 @@
 				<div class="form-left">
 					<h2>General Infomation</h2>
 					<div class="form-row">
-						<select name="title">
-						    <option class="option" value="title">Title</option>
-						    <option class="option" value="businessman">Businessman</option>
-						    <option class="option" value="reporter">Reporter</option>
-						    <option class="option" value="secretary">Secretary</option>
+						<select name="role">
+						    <option class="option" value="role">Role</option>
+						    <option class="option" value="businessman">Santri</option>
+						    <option class="option" value="reporter">Ustadz/Ustadzah</option>
+						    <option class="option" value="secretary">Staff</option>
 						</select>
 						<span class="select-btn">
 						  	<i class="zmdi zmdi-chevron-down"></i>
@@ -37,81 +37,66 @@
 						</div>
 					</div>
 					<div class="form-row">
-						<select name="position">
+						<!-- <select name="position">
 						    <option value="position">Position</option>
 						    <option value="director">Director</option>
 						    <option value="manager">Manager</option>
 						    <option value="employee">Employee</option>
-						</select>
-						<span class="select-btn">
-						  	<i class="zmdi zmdi-chevron-down"></i>
-						</span>
+						</select> -->
+						<!-- <span class="select-btn"> -->
+						  	<!-- <i class="zmdi zmdi-chevron-down"></i> -->
 					</div>
 					<div class="form-row">
-						<input type="text" name="company" class="company" id="company" placeholder="Company" required>
+						<input type="text" name="kota_lahir" class="company" id="kota_lahir" placeholder="Kota lahir" required>
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-3">
-							<input type="text" name="business" class="business" id="business" placeholder="Business Arena" required>
+							<input type="text" name="tanggal_lahir" class="business" id="tanggal_lahir" placeholder="Tanggal lahir" required>
 						</div>
 						<div class="form-row form-row-4">
-							<select name="employees">
-							    <option value="employees">Employees</option>
-							    <option value="trainee">Trainee</option>
-							    <option value="colleague">Colleague</option>
-							    <option value="associate">Associate</option>
+							<select name="gender">
+							    <option value="gender">Gender</option>
+							    <option value="male">Male</option>
+							    <option value="female">Female</option>
 							</select>
 							<span class="select-btn">
 							  	<i class="zmdi zmdi-chevron-down"></i>
-							</span>
+                           </span>
 						</div>
 					</div>
+					<!-- <div class="form-row">
+						<input type="text" name="email" class="company" id="email" placeholder="Email" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="no_hp" class="company" id="no_hp" placeholder="Phone number" required>
+					</div> -->
 				</div>
 				<div class="form-right">
-					<h2>Contact Details</h2>
+					<h2>Detail Information</h2>
 					<div class="form-row">
-						<input type="text" name="street" class="street" id="street" placeholder="Street + Nr" required>
-					</div>
-					<div class="form-row">
-						<input type="text" name="additional" class="additional" id="additional" placeholder="Additional Information" required>
-					</div>
-					<div class="form-group">
-						<div class="form-row form-row-1">
-							<input type="text" name="zip" class="zip" id="zip" placeholder="Zip Code" required>
-						</div>
-						<div class="form-row form-row-2">
-							<select name="place">
-							    <option value="place">Place</option>
-							    <option value="Street">Street</option>
-							    <option value="District">District</option>
-							    <option value="City">City</option>
-							</select>
-							<span class="select-btn">
-							  	<i class="zmdi zmdi-chevron-down"></i>
-							</span>
-						</div>
+						<input type="text" name="ortu" class="street" id="ortu" placeholder="Nama Orang tua" required>
 					</div>
 					<div class="form-row">
-						<select name="country">
-						    <option value="country">Country</option>
-						    <option value="Vietnam">Vietnam</option>
-						    <option value="Malaysia">Malaysia</option>
-						    <option value="India">India</option>
-						</select>
-						<span class="select-btn">
-						  	<i class="zmdi zmdi-chevron-down"></i>
-						</span>
+						<input type="text" name="alamat_ortul" class="additional" id="alamat_ortu" placeholder="Alamat orang tua" required>
 					</div>
-					<div class="form-group">
+					
+					<div class="form-row">
+						<input type="text" name="email" class="company" id="email" placeholder="Email" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="no_hp" class="company" id="no_hp" placeholder="Phone number" required>
+					</div>
+
+					<!-- <div class="form-group">
 						<div class="form-row form-row-1">
 							<input type="text" name="code" class="code" id="code" placeholder="Code +" required>
 						</div>
 						<div class="form-row form-row-2">
 							<input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" required>
 						</div>
-					</div>
+					</div> -->
 					<div class="form-row">
-						<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
+						<input type="text" name="password" id="password" class="input-text"  placeholder="Create password">
 					</div>
 					<div class="form-checkbox">
 						<label class="container"><p>I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.</p>
@@ -120,7 +105,7 @@
 						</label>
 					</div>
 					<div class="form-row-last">
-						<input type="submit" name="register" class="register" value="Register Badge">
+						<input type="submit" name="register" class="register" value="Register">
 					</div>
 				</div>
 			</form>
