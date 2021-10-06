@@ -134,7 +134,7 @@
             <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
               <i class="bx bx-images"></i>
               <h4>Akses modul pembelajaran</h4>
-              <p>Akses modul dan materi pembelajaran kapanun dan di manapun</p>
+              <p>Akses modul dan materi pembelajaran kapanpun dan di manapun</p>
             </div>
             <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="400">
               <i class="bx bx-shield"></i>
