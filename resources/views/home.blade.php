@@ -69,7 +69,7 @@
     <div class="container-fluid" data-aos="fade-up">
       <div class="row justify-content-center">
         <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Selamat datang di TPQ Al-Mubaroq</h1>
+          <h1>CAPEKKKKK YA ALLAHH BISMILLAH</h1>
           <h2>Mencetak insan intelektual dan berakhlak Qur'ani</h2>
           <div><a href="/signup" class="btn-get-started scrollto">Sign up</a></div>
         </div>
