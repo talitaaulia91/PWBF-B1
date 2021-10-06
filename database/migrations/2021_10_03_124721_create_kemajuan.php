@@ -13,15 +13,17 @@ class CreateKemajuan extends Migration
      */
     public function up()
     {
-        Schema::create('kemajuan', function (Blueprint $table) {       
-            $table->char('id_kemajuan',5);
-            $table->char('id_santri',10);
-            $table->char('id_pengurus',10);
+        Schema::create('kemajuan', function (Blueprint $table) {
+            $table->id();
             $table->date('tanggal');
             $table->char('status',1);
-            $table->foreign('id_santri')->references('id_santri')->on('santri');
-            $table->foreign('id_pengurus')->references('id_pengurus')->on('pengurus');
-            $table->primary('id_kemajuan');
+            $table->timestamps();
+        });
+
+        Schema::table('kemajuan', function (Blueprint $table) {
+            $table->foreignId('id_santri')->constrained('santri');
+            $table->foreignId('id_pengurus')->constrained('pengurus');
+        
         });
     }
 

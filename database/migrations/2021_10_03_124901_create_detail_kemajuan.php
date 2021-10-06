@@ -14,14 +14,14 @@ class CreateDetailKemajuan extends Migration
     public function up()
     {
         Schema::create('detail_kemajuan', function (Blueprint $table) {
-            $table->char('id_dk',5);
-            $table->char('id_kemajuan',5);
-            $table->char('id_bab',3);
+            $table->id();
             $table->text('keterangan');
-            $table->foreign('id_kemajuan')->references('id_kemajuan')->on('kemajuan');
-            $table->foreign('id_bab')->references('id_bab')->on('bab');
-            $table->primary('id_dk');
-           
+            $table->timestamps();
+        });
+
+        Schema::table('detail_kemajuan', function (Blueprint $table) {
+            $table->foreignId('id_kemajuan')->constrained('kemajuan');
+            $table->foreignId('id_bab')->constrained('bab');
         });
     }
 

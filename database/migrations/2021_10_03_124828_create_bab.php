@@ -14,13 +14,15 @@ class CreateBab extends Migration
     public function up()
     {
         Schema::create('bab', function (Blueprint $table) {
-            $table->char('id_bab',3);
-            $table->char('id_buku',5);
+            $table->id();
             $table->string('bab',50);
             $table->string('judul',100);
             $table->text('keterangan');
-            $table->foreign('id_buku')->references('id_buku')->on('buku');
-            $table->primary('id_bab');
+            $table->timestamps();
+        });
+
+        Schema::table('bab', function (Blueprint $table) {
+            $table->foreignId('id_buku')->constrained('buku');
         });
     }
 

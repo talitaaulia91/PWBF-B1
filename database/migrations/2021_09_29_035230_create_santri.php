@@ -14,21 +14,18 @@ class CreateSantri extends Migration
     public function up()
     {
         Schema::create('santri', function (Blueprint $table) {
-           
-            $table->char('id_santri',10);
-            $table->string('nama', 30);
+            $table->id();
+            $table->string('nama',50);
             $table->char('gender',1);
-            $table->date('tgl_Lahir');
-            $table->string('kota_Lahir',20);
-            $table->string('nama_Ortu',30);
-            $table->string('alamat_Ortu',100);
-            $table->string('no_hp',13);
+            $table->date('tgl_lhr');
+            $table->string('kota_lhr',40);
+            $table->string('nama_ortu',50);
+            $table->string('alamat_ortu',100);
+            $table->string('hp',15);
             $table->string('email',30);
-            $table->string('password',15);
-            $table->date('tgl_Masuk');
-            $table->char('aktif', 1);
-            $table->primary('id_santri');
-           
+            $table->date('tgl_masuk');
+            $table->boolean('aktif');
+            $table->timestamps();
         });
     }
 

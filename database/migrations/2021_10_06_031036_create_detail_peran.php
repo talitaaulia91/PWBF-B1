@@ -14,14 +14,13 @@ class CreateDetailPeran extends Migration
     public function up()
     {
         Schema::create('detail_peran', function (Blueprint $table) {
-            
-            $table->char('id_dp',5);
-            $table->char('id_peran',5);
-            $table->char('id_pengurus',10);
-            $table->foreign('id_peran')->references('id_peran')->on('peran');
-            $table->foreign('id_pengurus')->references('id_pengurus')->on('pengurus');
-            $table->primary('id_dp');
-            
+            $table->id();
+            $table->timestamps();
+        });
+
+        Schema::table('detail_peran', function (Blueprint $table) {
+            $table->foreignId('id_peran')->constrained('peran');
+            $table->foreignId('id_pengurus')->constrained('pengurus');
         });
     }
 

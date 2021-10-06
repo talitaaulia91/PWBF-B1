@@ -14,15 +14,14 @@ class CreatePengurus extends Migration
     public function up()
     {
         Schema::create('pengurus', function (Blueprint $table) {
-           
-            $table->char('id_pengurus',10);
-            $table->string('nama', 30);
-            $table->string('email', 30);
+            $table->id();
+            $table->string('nama',30);
+            $table->string('email',30);
+            $table->string('hp',15);
             $table->char('gender',1);
-            $table->string('password',15);
-            $table->char('aktif',1);
-            $table->primary('id_pengurus');
-            
+            $table->char('password',32);
+            $table->boolean('aktif');
+            $table->timestamps();
         });
     }
 

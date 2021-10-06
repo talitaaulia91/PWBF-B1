@@ -14,13 +14,12 @@ class CreatePeran extends Migration
     public function up()
     {
         Schema::create('peran', function (Blueprint $table) {
-          
-            $table->char('id_peran',5);
+            $table->id();
             $table->string('peran',20);
-            $table->char('aktif',1);   
-            $table->primary('id_peran');        
-           
+            $table->boolean('aktif');
+            $table->timestamps();
         });
+        
     }
 
     /**

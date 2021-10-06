@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\santri;
+use App\Models\Santri;
 
 
 
 class SantriController extends Controller
 {
     public function santri(){
-        $santri = santri::all();
+        $santri = Santri::all();
     }
 
 

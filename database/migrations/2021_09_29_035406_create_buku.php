@@ -14,12 +14,10 @@ class CreateBuku extends Migration
     public function up()
     {
         Schema::create('buku', function (Blueprint $table) {
-          
-            $table->char('id_buku', 5);
-            $table->string('judul_buku', 30);
+            $table->id();
+            $table->string('buku',50);
             $table->text('keterangan');
-            $table->primary('id_buku');
-            
+            $table->timestamps();
         });
     }
 
