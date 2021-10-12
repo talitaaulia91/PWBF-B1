@@ -11,12 +11,8 @@ class SantriController extends Controller
 {
     public function santri(){
         $santri = Santri::all();
+
+        return view('dashboard.tabelSantri', ['santri' => $santri]);
     }
-
-
-
-
-
-
 }
 

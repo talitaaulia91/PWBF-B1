@@ -7,7 +7,9 @@ use App\Http\Controllers\about;
 use App\Http\Controllers\home;
 use App\Http\Controllers\dashboard;
 use App\Http\Controllers\tables;
-use App\Http\Controllers\SantriController;;
+use App\Http\Controllers\buttons;
+use App\Http\Controllers\cards;
+use App\Http\Controllers\SantriController;
 
 
 
@@ -43,7 +45,8 @@ Route::get('/about', [about::class, 'about']);
 
 Route::get('/dashboard', [dashboard::class, 'dashboard']);
 
-Route::get('/tables', [tables::class, 'tables']);
+Route::get('/santri', [SantriController::class, 'santri']);
+
 
 
 
