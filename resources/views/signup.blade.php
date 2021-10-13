@@ -19,10 +19,9 @@
 					<h2>General Infomation</h2>
 					<div class="form-row">
 						<select name="role">
-						    <option class="option" value="role">Role</option>
+						    <option class="option" value="role" disabled selected hidden >Role</option>
 						    <option class="option" value="businessman">Santri</option>
-						    <option class="option" value="reporter">Ustadz/Ustadzah</option>
-						    <option class="option" value="secretary">Staff</option>
+						    <option class="option" value="reporter">Pengajar</option>
 						</select>
 						<span class="select-btn">
 						  	<i class="zmdi zmdi-chevron-down"></i>
@@ -37,27 +36,21 @@
 						</div>
 					</div>
 					<div class="form-row">
-						<!-- <select name="position">
-						    <option value="position">Position</option>
-						    <option value="director">Director</option>
-						    <option value="manager">Manager</option>
-						    <option value="employee">Employee</option>
-						</select> -->
-						<!-- <span class="select-btn"> -->
-						  	<!-- <i class="zmdi zmdi-chevron-down"></i> -->
+
 					</div>
 					<div class="form-row">
 						<input type="text" name="kota_lahir" class="company" id="kota_lahir" placeholder="Kota lahir" required>
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-3">
-							<input type="text" name="tanggal_lahir" class="business" id="tanggal_lahir" placeholder="Tanggal lahir" required>
+							{{-- <input type="text" name="tanggal_lahir" class="business" id="tanggal_lahir" placeholder="Tanggal lahir" required> --}}
+							<input type="text" class="form-control" placeholder="Tanggal lahir" value="" onfocus="(this.type='date')" required />
 						</div>
 						<div class="form-row form-row-4">
 							<select name="gender">
-							    <option value="gender">Gender</option>
-							    <option value="male">Male</option>
-							    <option value="female">Female</option>
+							    <option value="gender" disabled selected hidden>Gender</option>
+							    <option value="m">Male</option>
+							    <option value="f">Female</option>
 							</select>
 							<span class="select-btn">
 							  	<i class="zmdi zmdi-chevron-down"></i>

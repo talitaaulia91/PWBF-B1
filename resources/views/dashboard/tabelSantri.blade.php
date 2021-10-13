@@ -24,7 +24,7 @@
                                             <th>Nama orang tua</th>
                                             <th>Alamat orang tua</th>
                                             <th>No hp</th>
-                                            <th>Email</th>
+                                            <th>Email</th>                                         
                                             <th>Tanggal masuk</th>
                                             <th>Aktif</th>
                                         </tr>
