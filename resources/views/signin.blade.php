@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>TPQ AL-MUBAROQ || Login</title>
 	<link href="css/signin.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +15,7 @@
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="/dashboard" method="get">
-			<h1>Sign in</h1>
+			<h1>Login</h1>
 
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />

@@ -33,7 +33,7 @@ use App\Http\Controllers\PengurusController;
 
 
 
-Route::get('/', [home::class, 'home']);
+Route::get('/home', [home::class, 'home']);
 
 Route::get('/signup', [signup::class, 'signup']);
 
