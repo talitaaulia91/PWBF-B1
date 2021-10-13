@@ -14,7 +14,7 @@
 <body class="form-v10">
 	<div class="page-content">
 		<div class="form-v10-content">
-			<form class="form-detail" action="#" method="post" id="myform">
+			<form class="form-detail" action="/signin" method="get" id="myform">
 				<div class="form-left">
 					<h2>General Infomation</h2>
 					<div class="form-row">

@@ -14,7 +14,7 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form action="/dashboard" method="get">
 			<h1>Sign in</h1>
 
 			<input type="email" placeholder="Email" />
