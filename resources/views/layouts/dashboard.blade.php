@@ -87,10 +87,8 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tables</h6>
                         <a class="collapse-item" href="/santri">Santri</a>
-                        <a class="collapse-item" href="utilities-border">Pengurus</a>
+                        <a class="collapse-item" href="/pengurus">Pengurus</a>
                         <a class="collapse-item" href="utilities-other">Kemajuan</a>
-                        <a class="collapse-item" href="utilities-other">Buku</a>
-                        <a class="collapse-item" href="utilities-other">Peran</a>
                     </div>
                 </div>
             </li>

@@ -9,5 +9,7 @@ class PengurusController extends Controller
 {
     public function pengurus(){
         $pengurus = Pengurus::all();
+
+        return view('dashboard.tabelPengurus', ['pengurus' => $pengurus]);
     }
 }
