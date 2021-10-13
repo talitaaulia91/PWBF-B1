@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pengurus extends Model
 {
+    use HasFactory;
     protected $table = 'pengurus';
 
 

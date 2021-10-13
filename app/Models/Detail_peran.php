@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_peran extends Model
 {
+    use HasFactory;
    protected $table = 'detail_peran';
 
    public function pengurus(){

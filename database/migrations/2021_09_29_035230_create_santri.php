@@ -22,8 +22,8 @@ class CreateSantri extends Migration
             $table->string('nama_ortu',50);
             $table->string('alamat_ortu',100);
             $table->string('hp',15);
-            $table->string('email',30);
-            $table->string('password',30);
+            $table->string('email',50);
+            $table->string('password',32);
             $table->date('tgl_masuk');
             $table->boolean('aktif');
             $table->timestamps();

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_kemajuan extends Model
 {
+    use HasFactory;
     protected $table = 'detail_kemajuan';
 
 

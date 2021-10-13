@@ -16,7 +16,7 @@ class CreateKemajuan extends Migration
         Schema::create('kemajuan', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
-            $table->char('status',1);
+            $table->string('status',5);
             $table->timestamps();
         });
 

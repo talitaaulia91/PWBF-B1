@@ -15,8 +15,8 @@ class CreatePengurus extends Migration
     {
         Schema::create('pengurus', function (Blueprint $table) {
             $table->id();
-            $table->string('nama',30);
-            $table->string('email',30);
+            $table->string('nama',50);
+            $table->string('email',50);
             $table->string('hp',15);
             $table->char('gender',1);
             $table->char('password',32);
