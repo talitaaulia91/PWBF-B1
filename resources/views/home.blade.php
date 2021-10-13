@@ -274,7 +274,7 @@
               </div>
             </li>
 
-            {{-- <li data-aos="fade-up" data-aos-delay="400">
+            <li data-aos="fade-up" data-aos-delay="400">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                 <p>
@@ -296,7 +296,7 @@
         </div>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section --> --}}
+    </section><!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
