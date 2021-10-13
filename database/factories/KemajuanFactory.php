@@ -23,7 +23,7 @@ class KemajuanFactory extends Factory
     {
         return [
             'tanggal' => $this->faker->date(),
-            'status' => $this->faker->randomElement(['maju', 'naik','tetap']),
+            'status' => $this->faker->randomElement(['turun', 'naik','tetap']),
             'id_santri' => mt_rand(1,100),
             'id_pengurus' => mt_rand(1,50)
         ];
