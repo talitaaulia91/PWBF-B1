@@ -14,37 +14,41 @@
 <body class="form-v10">
 	<div class="page-content">
 		<div class="form-v10-content">
-			<form class="form-detail" action="/signin" method="get" id="myform">
+			<form class="form-detail" action="/signup" method="post" role="form" id="myform">
+				@csrf
 				<div class="form-left">
 					<h2>General Infomation</h2>
 					<div class="form-row">
-						<select name="role">
-						    <option class="option" value="role" disabled selected hidden >Role</option>
-						    <option class="option" value="businessman">Santri</option>
-						    <option class="option" value="reporter">Pengajar</option>
-						</select>
-						<span class="select-btn">
-						  	<i class="zmdi zmdi-chevron-down"></i>
-						</span>
 					</div>
-					<div class="form-group">
-						<div class="form-row form-row-1">
-							<input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required>
-						</div>
-						<div class="form-row form-row-2">
-							<input type="text" name="last_name" id="last_name" class="input-text" placeholder="Last Name" required>
-						</div>
-					</div>
-					<div class="form-row">
+					
 
-					</div>
+
 					<div class="form-row">
-						<input type="text" name="kota_lahir" class="company" id="kota_lahir" placeholder="Kota lahir" required>
+						<input type="text" name="nama_santri" class="company" id="kota_lahir" placeholder="Nama" value="{{ old('nama_santri') }}"required>
+						@error('nama_santri')
+                                            <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
+					</div>
+
+					<div class="form-row">
+						<input type="text" name="kota_lhr" class="company" id="kota_lahir" placeholder="Kota lahir" value="{{ old('kota_lhr') }}" required>
+						@error('kota_lhr')
+                                            <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-3">
 							{{-- <input type="text" name="tanggal_lahir" class="business" id="tanggal_lahir" placeholder="Tanggal lahir" required> --}}
-							<input type="text" class="form-control" placeholder="Tanggal lahir" value="" onfocus="(this.type='date')" required />
+							<input type="text" name="tgl_lhr" class="form-control" placeholder="Tanggal lahir" onfocus="(this.type='date')" required />
+							@error('tgl_lhr')
+							<div class="invalid-feedback">
+							{{ $message }}
+						</div>
+						@enderror
 						</div>
 						<div class="form-row form-row-4">
 							<select name="gender">
@@ -67,17 +71,37 @@
 				<div class="form-right">
 					<h2>Detail Information</h2>
 					<div class="form-row">
-						<input type="text" name="ortu" class="street" id="ortu" placeholder="Nama Orang tua" required>
+						<input type="text" name="nama_ortu" class="street" id="ortu" placeholder="Nama Orang tua" value="{{ old('nama_ortu') }}"required>
+						@error('nama_ortu')
+                                            <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
 					</div>
 					<div class="form-row">
-						<input type="text" name="alamat_ortul" class="additional" id="alamat_ortu" placeholder="Alamat orang tua" required>
+						<input type="text" name="alamat_ortu" class="additional" id="alamat_ortu" placeholder="Alamat orang tua" value="{{ old('alamat_ortu') }}" required>
+						@error('alamat_ortu')
+						<div class="invalid-feedback">
+						{{ $message }}
+					</div>
+					@enderror
 					</div>
 					
 					<div class="form-row">
-						<input type="text" name="email" class="company" id="email" placeholder="Email" required>
+						<input type="text" name="email" class="company" id="email" placeholder="Email" value="{{ old('email') }}"required>
+						@error('email')
+                                            <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
 					</div>
 					<div class="form-row">
-						<input type="text" name="no_hp" class="company" id="no_hp" placeholder="Phone number" required>
+						<input type="text" name="hp" class="company" id="no_hp" placeholder="Phone number" value="{{ old('hp') }}" required>
+						@error('hp')
+                                            <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
 					</div>
 
 					<!-- <div class="form-group">
@@ -89,7 +113,12 @@
 						</div>
 					</div> -->
 					<div class="form-row">
-						<input type="text" name="password" id="password" class="input-text"  placeholder="Create password">
+						<input type="password" name="password" id="password" class="input-text"  placeholder="Create password">
+						@error('password')
+                                            <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
 					</div>
 					<div class="form-checkbox">
 						<label class="container"><p>I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.</p>
@@ -98,7 +127,8 @@
 						</label>
 					</div>
 					<div class="form-row-last">
-						<input type="submit" name="register" class="register" value="Register">
+						{{-- <input type="submit" name="register" class="register" value="Register"> --}}
+						<button type="submit" class="register" > Register</button>
 					</div>
 				</div>
 			</form>

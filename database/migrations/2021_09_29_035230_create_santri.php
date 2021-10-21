@@ -15,7 +15,7 @@ class CreateSantri extends Migration
     {
         Schema::create('santri', function (Blueprint $table) {
             $table->id();
-            $table->string('nama',50);
+            $table->string('nama_santri',50);
             $table->char('gender',1);
             $table->date('tgl_lhr');
             $table->string('kota_lhr',40);
@@ -23,9 +23,9 @@ class CreateSantri extends Migration
             $table->string('alamat_ortu',100);
             $table->string('hp',15);
             $table->string('email',50);
-            $table->string('password',32);
-            $table->date('tgl_masuk');
-            $table->boolean('aktif');
+            $table->string('password');
+            $table->date('tgl_masuk')->default(date("Y-m-d"));
+            $table->boolean('aktif')->default(1);
             $table->timestamps();
         });
     }

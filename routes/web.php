@@ -50,6 +50,8 @@ Route::get('/pengurus', [PengurusController::class, 'pengurus']);
 
 Route::get('/kemajuan', [KemajuanController::class, 'kemajuan']);
 
+Route::post('/signup', [signup::class, 'store']);
+
 
 
 
