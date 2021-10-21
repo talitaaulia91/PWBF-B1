@@ -9,5 +9,7 @@ class KemajuanController extends Controller
 {
     public function kemajuan(){
         $kemajuan = Kemajuan::all();
+
+        return view('dashboard.tabelKemajuan', ['kemajuan' => $kemajuan]);
     }
 }

@@ -10,3 +10,4 @@ class signin extends Controller
         return view('signin');
     }
 }
+

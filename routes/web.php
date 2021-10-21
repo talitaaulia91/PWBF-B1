@@ -8,6 +8,7 @@ use App\Http\Controllers\home;
 use App\Http\Controllers\dashboard;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\KemajuanController;
 
 
 
@@ -46,6 +47,8 @@ Route::get('/dashboard', [dashboard::class, 'dashboard']);
 Route::get('/santri', [SantriController::class, 'santri']);
 
 Route::get('/pengurus', [PengurusController::class, 'pengurus']);
+
+Route::get('/kemajuan', [KemajuanController::class, 'kemajuan']);
 
 
 

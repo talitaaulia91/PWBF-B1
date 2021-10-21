@@ -38,7 +38,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">TPQ Al-Mubaroq</div>
+                <div class="sidebar-brand-text mx-3">Al-Mubaroq</div>
             </a>
 
             <!-- Divider -->
@@ -60,7 +60,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -73,7 +73,7 @@
                         <a class="collapse-item" href="cards">Cards</a>
                     </div>
                 </div>
-            </li>
+            </li> --}}
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -88,7 +88,7 @@
                         <h6 class="collapse-header">Tables</h6>
                         <a class="collapse-item" href="/santri">Santri</a>
                         <a class="collapse-item" href="/pengurus">Pengurus</a>
-                        <a class="collapse-item" href="utilities-other">Kemajuan</a>
+                        <a class="collapse-item" href="/kemajuan">Kemajuan</a>
                     </div>
                 </div>
             </li>
