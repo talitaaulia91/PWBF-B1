@@ -9,6 +9,8 @@ class BabController extends Controller
 {
     public function bab(){
         $bab = Bab::all();
+
+        return view('dashboard.tabelBab', ['bab' => $bab]);
     }
 
 }

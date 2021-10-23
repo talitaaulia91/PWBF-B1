@@ -9,5 +9,7 @@ class BukuController extends Controller
 {
     public function buku(){
         $buku = Buku::all();
+
+        return view('dashboard.tabelBuku', ['buku' => $buku]);
     }
 }

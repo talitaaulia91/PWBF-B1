@@ -89,6 +89,8 @@
                         <a class="collapse-item" href="/santri">Santri</a>
                         <a class="collapse-item" href="/pengurus">Pengurus</a>
                         <a class="collapse-item" href="/kemajuan">Kemajuan</a>
+                        <a class="collapse-item" href="/buku">Buku</a>
+                        <a class="collapse-item" href="/bab">Bab</a>
                     </div>
                 </div>
             </li>

@@ -9,6 +9,8 @@ use App\Http\Controllers\dashboard;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\KemajuanController;
+use App\Http\Controllers\BukuController;
+use App\Http\Controllers\BabController;
 
 
 
@@ -49,6 +51,10 @@ Route::get('/santri', [SantriController::class, 'santri']);
 Route::get('/pengurus', [PengurusController::class, 'pengurus']);
 
 Route::get('/kemajuan', [KemajuanController::class, 'kemajuan']);
+
+Route::get('/buku', [BukuController::class, 'buku']);
+
+Route::get('/bab', [BabController::class, 'bab']);
 
 Route::post('/signup', [signup::class, 'store']);
 

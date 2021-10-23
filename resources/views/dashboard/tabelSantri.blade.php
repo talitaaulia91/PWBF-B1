@@ -33,7 +33,7 @@
                                         @foreach ($santri as $dataSantri)
                                         <tr>
                                             <td>{{ $dataSantri -> id }}</td>
-                                            <td>{{ $dataSantri -> nama }}</td>
+                                            <td>{{ $dataSantri -> nama_santri }}</td>
                                             <td>{{ $dataSantri -> gender }}</td>
                                             <td>{{ $dataSantri -> tgl_lhr }}</td>
                                             <td>{{ $dataSantri -> kota_lhr }}</td>
