@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,40 +96,43 @@
     <div class="container">
         <div class="row justify-content-center mb-3">
             <div class="col-md-7 text-center">
-                <h1 class="display-5 mb-3">Meet The Team</h1>
-                <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h1 class="display-5 mb-3">KELOMPOK 5 PENDIDIKAN</h1>
+                <p class="lead">TPQ AL-MUBAROQ</p>
             </div>
         </div>
         <div class="row">
             <!-- column  -->
             <div class="col-lg-6">
-                <div class="card shadow border-0 mb-4">
+                <div class="card shadow border-2 mb-4">
                     <!-- Row -->
-                    <div class="row no-gutters">
-                        {{-- <div class="col-md-5 pro-pic" style="background:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t1.jpg) center center no-repeat"> --}}
-                         <div>
-                          <img src="assets/img/testimonials/boy1-01.png " class="col-md-5 pro-pic" >
-                        </div>
-                        <div class="col-md-7 bg-white">
-                            <div class="p-4">
-                                <h6 class="mb-3">Ilham Dwi Kurniawan</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                            </div>
-                        </div>
-                    </div> <!-- Row -->
+                    <div class="row no-gutters card-shadow">
+                      <div class="col-md-5 pro-pic" style="background:url(assets/img/testimonials/g.jpeg) center center no-repeat">
+
+                     </div>
+                     <div class="col-md-7 bg-white">
+                         <div class="p-4">
+                             <h6 class="mb-3">Ilham Dwi Kurniawan</h6>
+                             <p>Universitas Airlangga</p>
+                             <p>D3 Sistem Informasi</p>
+                             <p>152011513005</p>
+                         </div>
+                     </div>
+                 </div> <!-- Row -->
                 </div>
             </div> <!-- column  -->
             <div class="col-lg-6">
                 <div class="card shadow border-0 mb-4">
                     <!-- Row -->
                     <div class="row no-gutters card-shadow">
-                        <div class="col-md-5 pro-pic" style="background:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t2.jpg) center center no-repeat">
+                         <div class="col-md-5 pro-pic" style="background:url(assets/img/testimonials/h.jpeg) center center no-repeat">
 
                         </div>
                         <div class="col-md-7 bg-white">
                             <div class="p-4">
                                 <h6 class="mb-3">Hamimma Talita Aulia</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                <p>Universitas Airlangga</p>
+                                <p>D3 Sistem Informasi</p>
+                                <p>152011513024</p>
                             </div>
                         </div>
                     </div> <!-- Row -->
