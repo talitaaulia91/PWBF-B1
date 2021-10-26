@@ -1,138 +1,175 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TPQ AL-Mubaroq || About</title>
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TPQ AL-MUBAROQ</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
-        <div class="container"><a href="#" class="navbar-brand d-flex align-items-center"> <i class="fa fa-snowflake-o fa-lg text-primary mr-2"></i><strong>Snowflake</strong></a>
-          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-          <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="#" class="nav-link font-italic"> Home </a></li>
-              <li class="nav-item active"><a href="#" class="nav-link font-italic"> About </a></li>
-              <li class="nav-item active"><a href="#" class="nav-link font-italic"> Services </a></li>
-              <li class="nav-item active"><a href="#" class="nav-link font-italic"> Contact</a></li>
+ <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="index.html">TPQ AL-MUBAROQ</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="/">Home</a></li>
+          <li><a class="nav-link scrollto active" href="/about">About</a></li>
+          <li><a class="nav-link scrollto" href="/">Features</a></li>
+          <li class="dropdown"><a href="#getstarted"><span>Get started</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/signin">Sign in</a></li>
+              <li><a href="/signup">Sign up</a></li>
             </ul>
-          </div>
+          </li>
+          <li><a class="nav-link scrollto" href="/home">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>ABOUT US!</h1>
+          <h2>Mencetak insan intelektual dan berakhlak Qur'ani</h2>
         </div>
-      </nav>
-      
-      <div class="bg-light">
-        <div class="container py-5">
-          <div class="row h-100 align-items-center py-5">
+        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 muslim1-01" data-aos="zoom-in" data-aos-delay="150">
+          <img src="assets/img/hero2-01.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+
+  <div class="bg-white py-5">
+    <div class="container py-5">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+          <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+          <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+        </div>
+        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="assets/img/muslim4-01.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-5 px-5 mx-auto"><img src="assets/img/muslim3-01.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+        <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+          <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+          <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-5 bg-light members">
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-7 text-center">
+                <h1 class="display-5 mb-3">Meet The Team</h1>
+                <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- column  -->
             <div class="col-lg-6">
-              <h1 class="display-4">About us page</h1>
-              <p class="lead text-muted mb-0">Create a minimal about us page using Bootstrap 4.</p>
-              <p class="lead text-muted">Snippet by <a href="https://bootstrapious.com/snippets" class="text-muted"> 
-                          <u>Bootstrapious</u></a>
-              </p>
-            </div>
-            <div class="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid"></div>
-          </div>
+                <div class="card shadow border-0 mb-4">
+                    <!-- Row -->
+                    <div class="row no-gutters">
+                        {{-- <div class="col-md-5 pro-pic" style="background:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t1.jpg) center center no-repeat"> --}}
+                         <div>
+                          <img src="assets/img/testimonials/boy1-01.png " class="col-md-5 pro-pic" >
+                        </div>
+                        <div class="col-md-7 bg-white">
+                            <div class="p-4">
+                                <h6 class="mb-3">Ilham Dwi Kurniawan</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+                    </div> <!-- Row -->
+                </div>
+            </div> <!-- column  -->
+            <div class="col-lg-6">
+                <div class="card shadow border-0 mb-4">
+                    <!-- Row -->
+                    <div class="row no-gutters card-shadow">
+                        <div class="col-md-5 pro-pic" style="background:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t2.jpg) center center no-repeat">
+
+                        </div>
+                        <div class="col-md-7 bg-white">
+                            <div class="p-4">
+                                <h6 class="mb-3">Hamimma Talita Aulia</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+                    </div> <!-- Row -->
+                </div>
+            </div> <!-- column  -->
         </div>
-      </div>
-      
-      <div class="bg-white py-5">
-        <div class="container py-5">
-          <div class="row align-items-center mb-5">
-            <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
-              <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
-              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
-            </div>
-            <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-          </div>
-          <div class="row align-items-center">
-            <div class="col-lg-5 px-5 mx-auto"><img src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-            <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
-              <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
-              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
-            </div>
-          </div>
+        <div class="row">
+            <!-- column  -->
+            <div class="col-lg-6">
+                <div class="card card-shadow border-0 mb-4">
+                    <!-- Row -->
+                    <div class="row no-gutters shadow">
+                        <div class="col-md-5 pro-pic" style="background:url('https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t3.jpg') center center no-repeat">
+                            <div class="card-img-overlay">
+                                <ul class="list-inline position-relative text-center">
+                                    <li class="list-inline-item"><a href="#" class="text-decoration-none d-block text-white px-1"><i class="icon-social-facebook"></i></a></li>
+                                    <li class="list-inline-item"><a href="#" class="text-decoration-none d-block text-white px-1"><i class="icon-social-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="#" class="text-decoration-none d-block text-white px-1"><i class="icon-social-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="#" class="text-decoration-none d-block text-white px-1"><i class="icon-social-behance"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+            </div> <!-- column  -->
         </div>
-      </div>
-      
-      <div class="bg-light py-5">
-        <div class="container py-5">
-          <div class="row mb-4">
-            <div class="col-lg-5">
-              <h2 class="display-4 font-weight-light">Our team</h2>
-              <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-          </div>
-      
-          <div class="row text-center">
-            <!-- Team item-->
-            <div class="col-xl-3 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
-                <ul class="social mb-0 list-inline mt-3">
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- End-->
-      
-            <!-- Team item-->
-            <div class="col-xl-3 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                <h5 class="mb-0">Samuel Hardy</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
-                <ul class="social mb-0 list-inline mt-3">
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- End-->
-      
-            <!-- Team item-->
-            <div class="col-xl-3 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                <h5 class="mb-0">Tom Sunderland</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
-                <ul class="social mb-0 list-inline mt-3">
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- End-->
-      
-            <!-- Team item-->
-            <div class="col-xl-3 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
-                <ul class="social mb-0 list-inline mt-3">
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- End-->
-      
-          </div>
-        </div>
-      </div>
-      
-      
-      <footer class="bg-light pb-5">
-        <div class="container text-center">
-          <p class="font-italic text-muted mb-0">&copy; Copyrights Company.com All rights reserved.</p>
-        </div>
-      </footer>
+    </div>
+</div>
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>

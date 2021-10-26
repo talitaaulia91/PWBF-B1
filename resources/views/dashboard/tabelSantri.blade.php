@@ -2,9 +2,7 @@
 
 @section('container')
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+    <div><button class="btn btn-primary " type="submit">Add</button></div>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -27,6 +25,9 @@
                                             <th>Email</th>                                         
                                             <th>Tanggal masuk</th>
                                             <th>Aktif</th>
+                                            <th>Edit</th>
+                                            <th>Hapus</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -43,6 +44,8 @@
                                             <td>{{ $dataSantri -> email }}</td>
                                             <td>{{ $dataSantri -> tgl_masuk }}</td>
                                             <td>{{ $dataSantri -> aktif }}</td>
+                                            <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
+                                            <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Hapus</button></div></td>
                                             
                                         </tr>
                                         @endforeach

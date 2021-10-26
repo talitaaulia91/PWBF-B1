@@ -58,6 +58,8 @@ Route::get('/bab', [BabController::class, 'bab']);
 
 Route::post('/signup', [signup::class, 'store']);
 
+Route::get('/createPengurus', [PengurusController::class, 'createPengurus']);
+
 
 
 

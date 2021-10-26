@@ -14,5 +14,8 @@ class SantriController extends Controller
 
         return view('dashboard.tabelSantri', ['santri' => $santri]);
     }
+
+
+
 }
 
