@@ -14,11 +14,11 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="/dashboard" method="get">
+		<form action="/signin-process" method="get">
 			<h1>Login</h1>
 
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input name="email" type="email" placeholder="Email" />
+			<input name="password" type="password" placeholder="Password" />
 			<a href="#">Forgot your password?</a>
 			<button type="submit" class="button" id="signin" >Sign In</button>
 		</form>

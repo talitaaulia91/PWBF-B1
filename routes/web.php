@@ -40,7 +40,8 @@ Route::get('/', [home::class, 'home']);
 
 Route::get('/signup', [signup::class, 'signup']);
 
-Route::get('/signin', [signin::class, 'signin']);
+Route::get('/signin', [signin::class, 'index']);
+Route::get('/signin-process', [signin::class, 'signin']);
 
 Route::get('/about', [about::class, 'about']);
 
@@ -59,12 +60,3 @@ Route::get('/bab', [BabController::class, 'bab']);
 Route::post('/signup', [signup::class, 'store']);
 
 Route::get('/createPengurus', [PengurusController::class, 'createPengurus']);
-
-
-
-
-
-
-
-
-
