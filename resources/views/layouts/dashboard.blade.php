@@ -72,13 +72,23 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tables</h6>
-                        <a class="collapse-item" href="/santri">Santri</a>
-                        <a class="collapse-item" href="/pengurus">Pengurus</a>
                         <a class="collapse-item" href="/buku">Buku</a>
-                        <a class="collapse-item" href="/peran">Peran</a>
+                        <a class="collapse-item" href="/kemajuan">Kemajuan</a>
+                        <a class="collapse-item" href="/pengurus">Pengurus</a>
+                        {{-- @can('admin') --}}
+                            <a class="collapse-item" href="/santri">Santri</a>
+                            <a class="collapse-item" href="/peran">Peran</a>
+                        {{-- @endcan --}}
                     </div>
                 </div>
             </li>
+
+            <!-- Divider -->
+            {{-- <hr class="sidebar-divider"> --}}
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -147,9 +157,9 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}</span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile_1.svg">
+                                    src="assets/img/testimonials/boy1-01.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -162,12 +172,8 @@
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/">
+                                <a class="dropdown-item" href="/logout">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>

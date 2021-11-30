@@ -2,7 +2,7 @@
 
 @section('container')
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-    <div><button class="btn btn-primary " type="submit">Add</button></div>
+    {{-- <div><button class="btn btn-primary " type="submit">Add</button></div> --}}
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -14,24 +14,34 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>ID Santri</th>
-                                            <th>Status</th>
-                                            <th>ID Pengurus</th>
-                                            <th>Edit</th>
-                                            <th>Hapus</th>
+                                            <th>ID</th>
+                                            <th>Nama</th>
+                                            <th>Email</th>                                         
+                                            <th>Aktif</th>
+                                            <th>Detail</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($kemajuan as $dataKemajuan)
+                                        @foreach ($santri as $dataSantri)
                                         <tr>
-                                            <td>{{ $dataKemajuan -> id }}</td>
-                                            <td>{{ $dataKemajuan -> id_santri }}</td>
-                                            <td>{{ $dataKemajuan -> status }}</td>
-                                            <td>{{ $dataKemajuan -> id_pengurus }}</td>
-                                            <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
-                                            <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Hapus</button></div></td>
-                                            
+                                            <td>{{ $dataSantri -> id }}</td>
+                                            <td>{{ $dataSantri -> name }}</td>
+                                            <td>{{ $dataSantri -> email }}</td>
+                                            <td> 
+                                                @if ($dataSantri -> aktif === 1)
+                                                    Aktif
+                                                    @else
+                                                    Tidak aktif                                     
+                                                @endif
+                                                             
+                                            </td>
+                                            <td>
+                                                <a href = "{{ url('/show-kemajuan') }}{{ $dataSantri->id }}">
+                                                    <button class="btn btn-info btn-block" type="submit">Show</button>
+                                                </a>
+                                            </td>
+                                
                                         </tr>
                                         @endforeach
                                          

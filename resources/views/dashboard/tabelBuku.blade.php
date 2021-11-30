@@ -2,7 +2,7 @@
 
 @section('container')
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-    <div><a href="/createBuku"><button class="btn btn-primary " type="submit">Add</button></div></a>
+    <div><a href="/form-create-buku"><button class="btn btn-primary " type="submit">Add</button></div></a>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -39,6 +39,7 @@
                                                 </a>
                                                 
                                             </td>
+
                                             <form action="{{ url('/delete-buku-') }} {{ $dataBuku->id }}" method="POST">
                                                 @method('delete')
                                                 @csrf

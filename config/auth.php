@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'santri',
     ],
 
     /*
@@ -39,6 +39,16 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+
+    'santri' => [
+        'driver' => 'session',
+        'provider' => 'santri'
+    ],
+
+    'pengurus' => [
+        'driver' => 'session',
+        'provider' => 'pengurus'
         ],
     ],
 
@@ -65,10 +75,15 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'santri' => [
+            'driver' => 'database',
+            'table' => 'santri',
+        ],
+
+        'pengurus' => [
+            'driver' => 'database',
+            'table' => 'pengurus',
+        ],
     ],
 
     /*
@@ -93,6 +108,20 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
+        'santri' => [
+            'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'pengurus' => [
+            'provider' => 'pengurus',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
     ],
 
     /*
@@ -106,6 +135,6 @@ return [
     |
     */
 
-    'password_timeout' => 10800,
+    'password_timeout' => 3600,
 
 ];

@@ -1,17 +1,21 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\signup;
-use App\Http\Controllers\signin;
-use App\Http\Controllers\about;
 use App\Http\Controllers\home;
+use App\Http\Controllers\about;
+use App\Http\Controllers\signin;
+use App\Http\Controllers\signup;
 use App\Http\Controllers\dashboard;
-use App\Http\Controllers\SantriController;
-use App\Http\Controllers\PengurusController;
-use App\Http\Controllers\KemajuanController;
-use App\Http\Controllers\BukuController;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BabController;
+use App\Http\Controllers\BukuController;
 use App\Http\Controllers\PeranController;
+use App\Http\Controllers\SantriController;
+use App\Http\Controllers\KemajuanController;
+use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\DetailKemajuanController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,52 +28,90 @@ use App\Http\Controllers\PeranController;
 |
 */
 
-//hone
+
+
+
+
+
+
+// Route::get('/', [postController::class, 'index']);
+    
+
+
+//home
 Route::get('/', [home::class, 'home']);
 Route::get('/about', [about::class, 'about']);
+
+
+
 
 //signup
 Route::get('/signup', [signup::class, 'signup']);
 Route::post('/signup', [signup::class, 'store']);
 
+
+
 //signin
 Route::post('/signin', [signin::class, 'authenticate']);
 Route::get('/signin', [signin::class, 'signin']);
+Route::get('/logout', [signin::class, 'logout']);
+
+
+
 
 //dashboard
-Route::get('/dashboard', [dashboard::class, 'dashboard']);
+Route::get('/dashboard', [dashboard::class, 'dashboard'])->middleware('auth');
+
+
 
 //kemajuan
-Route::get('/kemajuan', [KemajuanController::class, 'kemajuan']);
+Route::get('/kemajuan', [SantriController::class, 'kemajuan'])->middleware('auth');
+Route::get('/show-kemajuan{id}', [KemajuanController::class, 'kemajuan'])->middleware('auth');
+Route::get('/show-detail-kemajuan{id}', [DetailKemajuanController::class, 'index'])->middleware('auth');
+
+
+
+
 
 //bab
-Route::get('/bab', [BabController::class, 'bab']);
+Route::get('/form-create-bab{id}', [BabController::class, 'createBab'])->middleware('auth');
+Route::post('/create-bab', [BabController::class, 'store'])->middleware('auth');
+Route::delete('/delete-bab-{id}', [BabController::class, 'destroy'])->middleware('auth');
+Route::get('/form-edit-bab-{id}', [BabController::class, 'edit'])->middleware('auth');
+Route::put('/update-bab-{id}', [BabController::class, 'update'])->middleware('auth');
+
 
 //santri
-Route::get('/santri', [SantriController::class, 'santri']);
-Route::delete('/delete-santri-{id}', [SantriController::class, 'destroy']);
+Route::get('/santri', [SantriController::class, 'santri'])->middleware('auth');
+Route::delete('/delete-santri-{id}', [SantriController::class, 'destroy'])->middleware('auth');
+
+
 
 //pengurus
-Route::get('/pengurus', [PengurusController::class, 'pengurus']);
-Route::post('/createPengurus', [PengurusController::class, 'store']);
-Route::get('/createPengurus', [PengurusController::class, 'createPengurus']);
-Route::delete('/delete-pengurus-{id}', [PengurusController::class, 'destroy']);
-Route::get('/form-edit-pengurus-{id}', [PengurusController::class, 'edit']);
-Route::put('/update-pengurus-{id}', [PengurusController::class, 'update']);
+Route::get('/pengurus', [PengurusController::class, 'pengurus'])->middleware('auth');
+Route::post('/create-pengurus', [PengurusController::class, 'store'])->middleware('auth');
+Route::get('/form-create-pengurus', [PengurusController::class, 'createPengurus'])->middleware('auth');
+Route::delete('/delete-pengurus-{id}', [PengurusController::class, 'destroy'])->middleware('auth');
+Route::get('/form-edit-pengurus-{id}', [PengurusController::class, 'edit'])->middleware('auth');
+Route::put('/update-pengurus-{id}', [PengurusController::class, 'update'])->middleware('auth');
+
 
 //peran
-Route::get('/peran', [PeranController::class, 'peran']);
-Route::post('/createPeran', [PeranController::class, 'store']);
-Route::get('/createPeran', [PeranController::class, 'createPeran']);
-Route::delete('/delete-peran-{id}', [PeranController::class, 'destroy']);
-Route::get('/form-edit-peran-{id}', [PeranController::class, 'edit']);
-Route::put('/update-peran-{id}', [PeranController::class, 'update']);
+Route::get('/peran', [PeranController::class, 'peran'])->middleware('auth');
+Route::post('/create-peran', [PeranController::class, 'store'])->middleware('auth');
+Route::get('/form-create-peran', [PeranController::class, 'createPeran'])->middleware('auth');
+Route::delete('/delete-peran-{id}', [PeranController::class, 'destroy'])->middleware('auth');
+Route::get('/form-edit-peran-{id}', [PeranController::class, 'edit'])->middleware('auth');
+Route::put('/update-peran-{id}', [PeranController::class, 'update'])->middleware('auth');
+
+
 
 //buku
-Route::get('/buku', [BukuController::class, 'buku']);
-Route::get('/showbab', [BabController::class, 'bab']);
-Route::post('/createBuku', [BukuController::class, 'store']);
-Route::get('/createBuku', [BukuController::class, 'createBuku']);
-Route::delete('/delete-buku-{id}', [BukuController::class, 'destroy']);
-Route::get('/form-edit-buku-{id}', [BukuController::class, 'edit']);
-Route::put('/update-buku-{id}', [BukuController::class, 'update']);
+Route::get('/buku', [BukuController::class, 'buku'])->middleware('auth');
+Route::get('/showbab{id}', [BabController::class, 'index'])->middleware('auth');
+Route::post('/create-buku', [BukuController::class, 'store'])->middleware('auth');
+Route::get('/form-create-buku', [BukuController::class, 'createBuku'])->middleware('auth');
+Route::delete('/delete-buku-{id}', [BukuController::class, 'destroy'])->middleware('auth');
+Route::get('/form-edit-buku-{id}', [BukuController::class, 'edit'])->middleware('auth');
+Route::put('/update-buku-{id}', [BukuController::class, 'update'])->middleware('auth');
+

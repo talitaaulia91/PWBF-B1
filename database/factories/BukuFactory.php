@@ -22,8 +22,8 @@ class BukuFactory extends Factory
     public function definition()
     {
         return [
-            'judul' => $this->faker->sentence(3),
-            'keterangan' => $this->faker->sentence(20)
+            'judul' => $this->faker->sentence(2),
+            'keterangan' => $this->faker->sentence(10)
             
         ];
     }

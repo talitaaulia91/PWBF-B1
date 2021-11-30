@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>Create Pengurus</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -41,7 +41,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4"></h1>
                                     </div>
-                                    <form class="user" action="/createPengurus" method="post">
+                                    <form class="user" action="/create-pengurus" method="post">
                                         @csrf
                                         <div class="form-group">
                                             <input type="name" class="form-control"
@@ -70,7 +70,9 @@
                                         <button type = "submit" class="btn btn-primary btn-user btn-block">
                                             Add
                                         </button> 
+                                        <hr>
                                     </form>
+                                    <hr>
                                 </div>
                             </div>
                         </div>

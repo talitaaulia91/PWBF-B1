@@ -29,7 +29,7 @@
 			<div class="overlay-panel overlay-right">
 				<h1>Welcome back!</h1>
 				<p>Don't have an account? Register now!</p>
-				<button class="ghost" id="signUp">
+				<button id="signUp">
 				<a href="/signup" >Sign Up</a>	
 				</button>
 

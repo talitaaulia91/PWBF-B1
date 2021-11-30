@@ -22,7 +22,7 @@ class Detail_kemajuanFactory extends Factory
     public function definition()
     {
         return [
-            'keterangan' => $this->faker->sentence(20),
+            'keterangan' => $this->faker->sentence(10),
             'id_kemajuan' => mt_rand(1,50),
             'id_bab' => mt_rand(1,20)
   

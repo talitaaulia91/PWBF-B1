@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Create Peran</title>
+    <title>Edit Buku</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -43,21 +43,26 @@
                                     </div>
 
 
-                                    <form class="user" action="/create-peran" method="post">
+                                    <form class="user" action="/update-bab-{{ $bab->id }}"  method="post">
+                                        @method('put')
                                         @csrf
                                         <div class="form-group">
                                             <input type="name" class="form-control"
-                                                id="exampleInputEmail" name="peran" aria-describedby="emailHelp"
-                                                placeholder="Nama Peran">
+                                                id="exampleInputEmail" name="judul" aria-describedby="emailHelp" value="{{ old('judul', $bab->judul) }}"
+                                                placeholder="Judul">
                                         </div>
 
 
+                                        <div class="form-group">
+                                            <textarea rows="5" class="form-control @error('keterangan') is-invalid @enderror" name="keterangan" placeholder="Keterangan" required >{{ old('keterangan', $bab->keterangan) }}</textarea>
+                                        </div>
+
+
+
                                         <button type = "submit" class="btn btn-primary btn-user btn-block">
-                                            Add
+                                            Update
                                         </button> 
-                                        <hr>
                                     </form>
-                                    <hr>
                                 </div>
                             </div>
                         </div>

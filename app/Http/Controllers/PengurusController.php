@@ -38,6 +38,16 @@ class PengurusController extends Controller
 
         Pengurus::create($validatedData);
 
+        $idpengurus = Pengurus::latest()->first()->id;
+
+        DB::table('users')->insert([
+            'id_pengurus'   => $idpengurus,
+            'name' => $validatedData['nama_pengurus'],
+            'email'         => $validatedData['email'],
+            'password'      => $validatedData['password'],
+            'role'          => 'Pengurus',
+        ]);
+
         $request->session()->flash('success','Registrasi Berhasil!');
 
         return redirect('/pengurus');
@@ -50,12 +60,14 @@ class PengurusController extends Controller
         return redirect('/pengurus')->with('deletePengurus','Delete success!');
     }
 
+
     public function edit($id){
         return view('dashboard.edit.editPengurus',[
             'pengurus'  => Pengurus::find($id),
             "title"     => Pengurus::find($id)->pengurus
         ]);
     }
+
 
     public function update(Request $request, Pengurus $pengurus){
         $validatedData = $request->validate([
@@ -73,6 +85,8 @@ class PengurusController extends Controller
 
         return redirect('/pengurus');
     }
+
+
 
 
 

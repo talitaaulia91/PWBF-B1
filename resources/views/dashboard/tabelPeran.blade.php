@@ -2,7 +2,7 @@
 
 @section('container')
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-    <div><a href="/createPeran"><button class="btn btn-primary " type="submit">Add</button></div></a>
+    <div><a href="/form-create-peran"><button class="btn btn-primary " type="submit">Add</button></div></a>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -16,8 +16,9 @@
                                             <th>ID</th>
                                             <th>Peran</th>
                                             <th>Status</th>
+                                            <th>Detail</th>
                                             <th>Edit</th>
-                                            <th>Hapus</th>
+                                            <th>Hapus</th>                                         
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -31,6 +32,11 @@
                                                 @else
                                                     Tidak Aktif
                                                 @endif
+                                            </td>
+                                            <td>
+                                                <a href = "{{ url('/showpengurus') }}{{ $dataPeran->id }}">
+                                                    <button class="btn btn-info btn-block" type="submit">Show</button>
+                                                </a>
                                             </td>
                                             <td>
                                                 <a href="{{ url('/form-edit-peran-') }} {{ $dataPeran->id }}">

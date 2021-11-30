@@ -16,6 +16,14 @@ class SantriController extends Controller
     }
 
 
+
+    public function kemajuan(){
+        $santri = Santri::all();
+        return view('dashboard.tabelKemajuan', ['santri' => $santri]);
+    }
+
+
+
     public function destroy($id)
     {
         Santri::find($id)->delete();

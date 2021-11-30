@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Create Peran</title>
+    <title>Create Bab</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -43,13 +43,36 @@
                                     </div>
 
 
-                                    <form class="user" action="/create-peran" method="post">
+                                    <form action="/create-bab" method="post">
                                         @csrf
+
+
+                                        <div class="form-group">
+                                            <select class="form-control" name="id_buku" required>
+                                                <option value="" disabled selected hidden>Judul Buku</option>
+                                                <option value="{{ $buku->id }}"> {{ $buku->judul }}</option>
+                                               
+                                            </select>
+                                        </div>
+
+
                                         <div class="form-group">
                                             <input type="name" class="form-control"
-                                                id="exampleInputEmail" name="peran" aria-describedby="emailHelp"
-                                                placeholder="Nama Peran">
+                                                id="exampleInputEmail" name="bab" aria-describedby="emailHelp"
+                                                placeholder="Bab">
                                         </div>
+
+                                        <div class="form-group">
+                                            <input type="name" class="form-control"
+                                                id="exampleInputEmail" name="judul" aria-describedby="emailHelp"
+                                                placeholder="Judul">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <textarea rows="5" class="form-control @error('keterangan') is-invalid @enderror" name="keterangan" placeholder="Keterangan" required></textarea>
+                                        </div>
+
 
 
                                         <button type = "submit" class="btn btn-primary btn-user btn-block">

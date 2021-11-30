@@ -2,6 +2,8 @@
 
 @section('container')
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    {{-- <div><button class="btn btn-primary " type="submit">Add</button></div> --}}
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -22,9 +24,10 @@
                                             <th>No hp</th>
                                             <th>Email</th>                                         
                                             <th>Tanggal masuk</th>
-                                            <th>Status</th>
+                                            <th>Aktif</th>
                                             <th>Edit</th>
                                             <th>Hapus</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -40,13 +43,7 @@
                                             <td>{{ $dataSantri -> hp }}</td>
                                             <td>{{ $dataSantri -> email }}</td>
                                             <td>{{ $dataSantri -> tgl_masuk }}</td>
-                                            <td>
-                                                @if ($dataSantri->aktif === 1)
-                                                    Aktif
-                                                @else
-                                                    Tidak Aktif
-                                                @endif
-                                            </td>
+                                            <td>{{ $dataSantri -> aktif }}</td>
                                             <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
                                             <form action="{{ url('/delete-santri-') }} {{ $dataSantri->id }}" method="POST">
                                                 @method('delete')
@@ -55,6 +52,9 @@
                                             </form> 
                                         </tr>
                                         @endforeach
+                                         
+                                        
+                                       
                                     </tbody>
                                 </table>
                             </div>

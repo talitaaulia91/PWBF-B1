@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Peran;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 
 class PeranController extends Controller
@@ -15,12 +16,15 @@ class PeranController extends Controller
         ]);
     }
 
+
     public function createPeran()
     {
         return view('dashboard.create.createPeran', [
             "title" => "Peran"
         ]);
     }
+
+
 
     public function store(Request $request){
         $validatedData = $request->validate([
@@ -34,12 +38,18 @@ class PeranController extends Controller
         return redirect('/peran');
     }
 
+
+
+
     public function destroy($id)
     {
         Peran::find($id)->delete();
 
         return redirect('/peran')->with('deletePeran','Delete success!');
     }
+
+
+
 
     public function edit($id)
     {
@@ -48,6 +58,10 @@ class PeranController extends Controller
             "title"     => Peran::find($id)->peran
         ]);
     }
+
+
+
+
 
     public function update(Request $request, Peran $pengurus){
         $validatedData = $request->validate([
@@ -59,4 +73,6 @@ class PeranController extends Controller
 
         return redirect('/peran');
     }
+
+
 }
