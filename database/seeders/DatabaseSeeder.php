@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
         Kemajuan::factory(50) -> create();
         Detail_kemajuan::factory(300) -> create();
         Detail_peran::factory(80) -> create();
+        
     }
 
 

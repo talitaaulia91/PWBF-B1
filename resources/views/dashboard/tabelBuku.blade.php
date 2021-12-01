@@ -18,8 +18,14 @@
                                             <th>Judul</th>
                                             <th>Keterangan</th>
                                             <th>Bab</th>
+
+                                            @can('pengurus')
                                             <th>Edit</th>
+                                            @endcan
+
+                                            @can('pengurus')
                                             <th>Hapus</th>
+                                            @endcan
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -33,18 +39,22 @@
                                                     <button class="btn btn-info btn-block" type="submit">Show</button>
                                                 </a>
                                             </td>
+                                            @can('pengurus')
                                             <td>
                                                 <a href = "{{ url('/form-edit-buku-') }}{{ $dataBuku->id }}">
                                                     <button class="btn btn-warning btn-block" type="submit">Edit</button>
                                                 </a>
                                                 
                                             </td>
-
+                                            @endcan
+                                           
+                                            @can('pengurus')
                                             <form action="{{ url('/delete-buku-') }} {{ $dataBuku->id }}" method="POST">
                                                 @method('delete')
                                                 @csrf
                                                 <td><button class="btn btn-danger btn-block" type="submit">Delete</button></td>     
-                                            </form>                   
+                                            </form>  
+                                            @endcan                 
                                         </tr>
                                         @endforeach
                                          

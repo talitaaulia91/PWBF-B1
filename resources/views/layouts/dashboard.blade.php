@@ -74,11 +74,12 @@
                         <h6 class="collapse-header">Tables</h6>
                         <a class="collapse-item" href="/buku">Buku</a>
                         <a class="collapse-item" href="/kemajuan">Kemajuan</a>
+                        
+                        @can('pengurus')
                         <a class="collapse-item" href="/pengurus">Pengurus</a>
-                        {{-- @can('admin') --}}
                             <a class="collapse-item" href="/santri">Santri</a>
                             <a class="collapse-item" href="/peran">Peran</a>
-                        {{-- @endcan --}}
+                        @endcan
                     </div>
                 </div>
             </li>
