@@ -14,6 +14,11 @@
 <body class="form-v10">
 	<div class="page-content">
 		<div class="form-v10-content">
+			@if (session()->has('success'))
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+				{{ session('success') }}
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>				
+			@endif
 			<form class="form-detail" action="/signup" method="post" role="form" id="myform">
 				@csrf
 				<div class="form-left">

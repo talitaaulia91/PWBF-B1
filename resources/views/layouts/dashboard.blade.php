@@ -75,10 +75,10 @@
                         <a class="collapse-item" href="/buku">Buku</a>
                         <a class="collapse-item" href="/kemajuan">Kemajuan</a>
                         <a class="collapse-item" href="/pengurus">Pengurus</a>
-                        @can('admin')
+                        {{-- @can('admin') --}}
                             <a class="collapse-item" href="/santri">Santri</a>
                             <a class="collapse-item" href="/peran">Peran</a>
-                        @endcan
+                        {{-- @endcan --}}
                     </div>
                 </div>
             </li>

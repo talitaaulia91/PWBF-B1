@@ -8,12 +8,20 @@
 	<link href="css/signin.css" rel="stylesheet">
 </head>
 <body>
+	
 <div class="container" id="container">
+
 	<div class="form-container sign-up-container">
+
 		<form action="#">
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
+		{{-- @if (session()->has('loginError'))
+		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			{{ session('loginError') }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>				
+		@endif --}}
 		<form action="/signin" method="post">
 			@csrf
 			<h1>Login</h1>

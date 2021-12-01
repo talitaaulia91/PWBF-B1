@@ -37,7 +37,7 @@ class signup extends Controller
         DB::table('users')->insert([
             'id_santri'     => $santri_id,
             'name'          => $validatedData['name'],
-            'role'          => 'santri',
+            'role'          => 'Santri',
             'email'         => $validatedData['email'],
             'password'      => $validatedData['password']
         ]);

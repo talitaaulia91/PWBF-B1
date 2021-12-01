@@ -42,7 +42,7 @@ class PengurusController extends Controller
 
         DB::table('users')->insert([
             'id_pengurus'   => $idpengurus,
-            'name' => $validatedData['nama_pengurus'],
+            'name'          => $validatedData['nama_pengurus'],
             'email'         => $validatedData['email'],
             'password'      => $validatedData['password'],
             'role'          => 'Pengurus',

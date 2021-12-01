@@ -22,7 +22,7 @@ class PengurusFactory extends Factory
     public function definition()
     {
         return [
-            'nama' => $this->faker->name(),
+            'nama_pengurus' => $this->faker->name(),
             'gender' => $this->faker->randomElement(['m', 'f']),
             'hp' => '+628'.mt_rand(1111111111,9999999999),
             'email' => $this->faker->unique()->safeEmail(),
