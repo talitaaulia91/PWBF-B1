@@ -2,7 +2,10 @@
 
 @section('container')
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    @can('adminpengurus')
     <div><a href="/form-create-bab{{ $buku->id }}"><button class="btn btn-primary " type="submit">Add</button></div></a>
+    @endcan
+   
 
 
                     <!-- DataTales Example -->
@@ -21,8 +24,11 @@
                                             <th>ID</th>
                                             <th>Judul</th>
                                             <th>Keterangan</th>
+                                            @can('adminpengurus')
                                             <th>Edit</th>
                                             <th>Hapus</th>
+                                            @endcan
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -31,6 +37,7 @@
                                             <td>{{ $dataBab -> id }}</td>
                                             <td>{{ $dataBab -> judul}}</td>
                                             <td>{{ $dataBab -> keterangan }}</td>   
+                                            @can('adminpengurus')
                                             <td>
                                                 <a href = "{{ url('/form-edit-bab-') }}{{ $dataBab->id }}">
                                                     <button class="btn btn-warning btn-block" type="submit">Edit</button>
@@ -42,7 +49,8 @@
                                                 @method('delete')
                                                 @csrf
                                                 <td><button class="btn btn-danger btn-block" type="submit">Delete</button></td>     
-                                            </form>                        
+                                            </form>   
+                                            @endcan                     
                                         </tr>
                                         @endforeach
                                          

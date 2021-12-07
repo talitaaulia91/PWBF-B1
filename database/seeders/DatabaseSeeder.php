@@ -10,6 +10,7 @@ use App\Models\Kemajuan;
 use App\Models\Pengurus;
 use App\Models\Detail_peran;
 use App\Models\Detail_kemajuan;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 
@@ -34,6 +35,7 @@ class DatabaseSeeder extends Seeder
         Kemajuan::factory(50) -> create();
         Detail_kemajuan::factory(300) -> create();
         Detail_peran::factory(80) -> create();
+        User::factory(1) -> create();
         
     }
 

@@ -14,6 +14,7 @@ use App\Http\Controllers\SantriController;
 use App\Http\Controllers\KemajuanController;
 use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\DetailKemajuanController;
+use App\Http\Controllers\DetailPeranController;
 
 
 
@@ -103,6 +104,7 @@ Route::get('/form-create-peran', [PeranController::class, 'createPeran'])->middl
 Route::delete('/delete-peran-{id}', [PeranController::class, 'destroy'])->middleware('auth');
 Route::get('/form-edit-peran-{id}', [PeranController::class, 'edit'])->middleware('auth');
 Route::put('/update-peran-{id}', [PeranController::class, 'update'])->middleware('auth');
+Route::get('/show-pengurus{id}', [DetailPeranController::class, 'index'])->middleware('auth');
 
 
 

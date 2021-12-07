@@ -34,7 +34,7 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <a href = "{{ url('/showpengurus') }}{{ $dataPeran->id }}">
+                                                <a href = "{{ url('/show-pengurus') }}{{ $dataPeran->id }}">
                                                     <button class="btn btn-info btn-block" type="submit">Show</button>
                                                 </a>
                                             </td>

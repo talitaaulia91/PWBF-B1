@@ -22,7 +22,7 @@ class BabFactory extends Factory
     public function definition()
     {
         return [
-            'bab'=> $this->faker->sentence(2),
+            'bab'=> $this->faker->sentence(3),
             'judul' => $this->faker->sentence(5),
             'keterangan' => $this->faker->sentence(10),
             'id_buku' => mt_rand(1,10)
