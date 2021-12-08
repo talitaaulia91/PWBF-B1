@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TPQ AL-MUBAROQ || Login</title>
 	<link href="css/signin.css" rel="stylesheet">
+	
 </head>
 <body>
 	
@@ -19,10 +20,15 @@
 	<div class="form-container sign-in-container">
 		<form action="/signin" method="post">
 			@if (session()->has('flash_message_error'))
-			<div class="alert alert-warning" role="alert">
-				<p style="text-align:center"><button type="reset" class="close" data-dismiss="alert">EMAIL OR PASSWORD IS WRONG</button></p>
-			</div>
+
+			
+			<div class="alert">
+				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			login gagal! 
+			  </div>
+
 		@endif 
+
 			@csrf
 			<h1>Login</h1>
 
