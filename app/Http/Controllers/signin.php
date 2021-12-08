@@ -30,7 +30,7 @@ class signin extends Controller
             return redirect()->intended('/dashboard');
         };
         
-        return back()->with('loginError', 'Login Gagal!');
+        return redirect('/signin')->with('flash_message_error', 'Login Gagal!');
     }
 
 
