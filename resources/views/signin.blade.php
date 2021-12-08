@@ -17,12 +17,12 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		{{-- @if (session()->has('loginError'))
-		<div class="alert alert-danger alert-dismissible fade show" role="alert">
-			{{ session('loginError') }}
-			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>				
-		@endif --}}
 		<form action="/signin" method="post">
+			@if (session()->has('flash_message_error'))
+			<div class="alert alert-warning" role="alert">
+				<p style="text-align:center"><button type="reset" class="close" data-dismiss="alert">EMAIL OR PASSWORD IS WRONG</button></p>
+			</div>
+		@endif 
 			@csrf
 			<h1>Login</h1>
 
