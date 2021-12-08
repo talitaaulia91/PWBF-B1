@@ -90,16 +90,19 @@
 					<div class="form-row">
 						<input type="text" name="email" class="company" id="email" placeholder="Email" value="{{ old('email') }}"required>
 						@error('email')
-                                            <div class="invalid-feedback">
-                                            {{ $message }}
+                                        <div class="invalid-feedback">
+                                        {{ $message }}
                                         </div>
                                         @enderror
 					</div>
+
+
+
 					<div class="form-row">
 						<input type="text" name="hp" class="company" id="no_hp" placeholder="Phone number" value="{{ old('hp') }}" required>
 						@error('hp')
-                                            <div class="invalid-feedback">
-                                            {{ $message }}
+                                        <div class="invalid-feedback">
+                                        {{ $message }}
                                         </div>
                                         @enderror
 					</div>

@@ -22,11 +22,11 @@
                                             <th>Keterangan</th>
                                             <th>Bab</th>
 
-                                            @can('pengurus')
+                                            @can('adminpengurus')
                                             <th>Edit</th>
                                             @endcan
 
-                                            @can('pengurus')
+                                            @can('adminpengurus')
                                             <th>Hapus</th>
                                             @endcan
                                         </tr>
@@ -42,7 +42,7 @@
                                                     <button class="btn btn-info btn-block" type="submit">Show</button>
                                                 </a>
                                             </td>
-                                            @can('pengurus')
+                                            @can('adminpengurus')
                                             <td>
                                                 <a href = "{{ url('/form-edit-buku-') }}{{ $dataBuku->id }}">
                                                     <button class="btn btn-warning btn-block" type="submit">Edit</button>
@@ -51,7 +51,7 @@
                                             </td>
                                             @endcan
                                            
-                                            @can('pengurus')
+                                            @can('adminpengurus')
                                             <form action="{{ url('/delete-buku-') }} {{ $dataBuku->id }}" method="POST">
                                                 @method('delete')
                                                 @csrf
