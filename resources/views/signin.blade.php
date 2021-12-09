@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TPQ AL-MUBAROQ || Login</title>
-	<link href="css/signin.css" rel="stylesheet">
-	
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Star Admin2 </title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
 </head>
+
 <body>
-	
-<div class="container" id="container">
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="content-wrapper d-flex align-items-center auth px-0">
+        <div class="row w-100 mx-0">
+          <div class="col-lg-4 mx-auto">
+            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
 
-	<div class="form-container sign-up-container">
-
-		<form action="#">
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="/signin" method="post">
-			@if (session()->has('flash_message_error'))
-
-			
-			<div class="alert">
-				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-			login gagal! 
-			  </div>
-
-		@endif 
-
-			@csrf
-			<h1>Login</h1>
-
-			<input name="email" type="email" placeholder="Email" />
-			<input name="password" type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
-			<button type="submit" class="button" id="signin" >Sign In</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay"> 
-			<div class="overlay-panel overlay-right">
-				<h1>Welcome back!</h1>
-				<p>Don't have an account? Register now!</p>
-				<button id="signUp">
-				<a href="/signup" >Sign Up</a>	
-				</button>
-
-			</div>
-		</div>
-	</div>
-</div>
+				@if (session()->has('flash_message_error'))
+				<div class="alert alert-danger">
+				<span class="closebtn" ></span>
+				login gagal! 
+			  	</div>
+				@endif 
+ 
+              <h4>Hello! let's get started</h4>
+              <h6 class="fw-light">Sign in to continue.</h6>
 
 
+			<form action="/signin" method="post">
+
+				
+
+
+				@csrf
+                <div class="form-group">
+                  <input name="email" type="email" class="form-control form-control-lg"  placeholder="Username">
+                </div>
+
+                <div class="form-group">
+                  <input name="password" type="password" class="form-control form-control-lg"  placeholder="Password">
+                </div>
+
+                <div class="mt-3">
+				<button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" id="signin" >Sign In</button>
+            
+                </div>
+
+
+                <div class="my-2 d-flex justify-content-between align-items-center">
+                </div>
+  
+                <div class="text-center mt-4 fw-light">
+                  Don't have an account? <a href="/signup" class="text-primary">Register now!</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
 </body>
+
 </html>

@@ -9,6 +9,7 @@ class Kemajuan extends Model
 {
     use HasFactory;
    protected $table = 'kemajuan';
+   protected $guarded = ['id'];
 
    public function santri(){
     return $this->belongsTo('App\Models\Santri', 'id_santri');

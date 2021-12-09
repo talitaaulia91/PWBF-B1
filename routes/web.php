@@ -69,6 +69,8 @@ Route::get('/dashboard', [dashboard::class, 'dashboard'])->middleware('auth');
 Route::get('/kemajuan', [SantriController::class, 'kemajuan'])->middleware('auth');
 Route::get('/show-kemajuan{id}', [KemajuanController::class, 'kemajuan'])->middleware('auth');
 Route::get('/show-detail-kemajuan{id}', [DetailKemajuanController::class, 'index'])->middleware('auth');
+Route::get('/form-create-kemajuan{id}', [KemajuanController::class, 'createKemajuan'])->middleware('auth');
+Route::post('/create-kemajuan', [KemajuanController::class, 'store'])->middleware('auth');
 
 
 

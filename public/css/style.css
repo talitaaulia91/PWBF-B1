@@ -1,6 +1,14 @@
 body {
 	margin:  0;
 }
+
+.alert {
+	padding: 15px;
+	background-color: #03db5d; 
+	color: white;
+	margin-bottom: 35px;
+  }
+
 .page-content {
 	width: 100%;
 	margin:  0;

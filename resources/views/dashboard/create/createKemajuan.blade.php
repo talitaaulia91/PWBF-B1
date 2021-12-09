@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -83,3 +83,57 @@
 </body>
 
 </html>
+
+
+ --}}
+
+
+ @extends('layouts.dashboard')
+
+@section('container')
+
+<body>
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Tambah Data Kemajuan</h4>
+            <form class="user" action="/create-kemajuan" method="post">
+                @csrf
+
+                <div class="form-group">
+                    <select class="form-control" name="id_buku" required>
+                        <option value="" disabled selected hidden>Judul Buku</option>
+                        <option value="{{ $santri->id }}"> {{ $santri->name }}</option>                 
+                    </select>
+                  </div>
+
+
+                <div class="form-group">
+                    <input type="name" class="form-control"
+                        id="exampleInputEmail" name="status" aria-describedby="emailHelp"
+                        placeholder="Status Kemajuan">
+                </div>
+
+                <div class="form-group">
+                        <input type="text" name="tanggal" class="form-control" 
+                        placeholder="Tanggal lahir" onfocus="(this.type='date')" required />
+                      
+             </div>
+
+              <button type = "submit" class="btn btn-primary">Tambah</button> 
+              {{-- <button class="btn btn-light">Cancel</button> --}}
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      @endsection
+
+
+
+
+
+
+
+

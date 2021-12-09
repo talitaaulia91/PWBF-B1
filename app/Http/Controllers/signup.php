@@ -42,12 +42,8 @@ class signup extends Controller
             'password'      => $validatedData['password']
         ]);
 
-      
-        
-
-        $request->session()->flash('success','Registrasi Berhasil! Silahkan Login');
-
-        return redirect('/signin');
+    
+        // return redirect('/signin');
     
     }
 }
