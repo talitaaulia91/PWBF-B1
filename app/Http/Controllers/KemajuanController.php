@@ -17,8 +17,9 @@ class KemajuanController extends Controller
 
         return view('dashboard.show.tabelKemajuan', [
             'kemajuan' => Kemajuan::where('id_santri', $id->id)-> get(),
-            'idSantri' => Santri::find($id)]
-        );
+            'idSantri' => Santri::find($id),
+            'pengurus'  => Pengurus::find($id)
+            ]);
     }
 
     public function createKemajuan($id)
@@ -26,7 +27,7 @@ class KemajuanController extends Controller
         return view('dashboard.create.createKemajuan', [
             'title'     => Santri::find($id)->nama,
             'idsantri'  => Santri::find($id)->id,
-            'pengurus'  => Pengurus::all(),
+            'pengurus'  => Pengurus::find($id),
         ]);
     }
 

@@ -57,7 +57,6 @@
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-3">
-							{{-- <input type="text" name="tanggal_lahir" class="business" id="tanggal_lahir" placeholder="Tanggal lahir" required> --}}
 							<input type="text" name="tgl_lhr" class="form-control" placeholder="Tanggal lahir" onfocus="(this.type='date')" required />
 							@error('tgl_lhr')
 							<div class="invalid-feedback">

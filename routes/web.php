@@ -64,6 +64,14 @@ Route::get('/logout', [signin::class, 'logout']);
 Route::get('/dashboard', [dashboard::class, 'dashboard'])->middleware('auth');
 
 
+//santri
+Route::get('/santri', [SantriController::class, 'santri'])->middleware('auth');
+Route::get('/form-edit-santri-{id}', [SantriController::class, 'edit'])->middleware('auth');
+Route::put('/update-santri-{id}', [SantriController::class, 'update'])->middleware('auth');
+Route::delete('/delete-santri-{id}', [SantriController::class, 'destroy'])->middleware('auth');
+
+
+
 
 //kemajuan
 Route::get('/kemajuan', [SantriController::class, 'kemajuan'])->middleware('auth');
@@ -84,9 +92,6 @@ Route::get('/form-edit-bab-{id}', [BabController::class, 'edit'])->middleware('a
 Route::put('/update-bab-{id}', [BabController::class, 'update'])->middleware('auth');
 
 
-//santri
-Route::get('/santri', [SantriController::class, 'santri'])->middleware('auth');
-Route::delete('/delete-santri-{id}', [SantriController::class, 'destroy'])->middleware('auth');
 
 
 

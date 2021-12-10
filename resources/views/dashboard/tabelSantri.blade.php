@@ -44,7 +44,12 @@
                                             <td>{{ $dataSantri -> email }}</td>
                                             <td>{{ $dataSantri -> tgl_masuk }}</td>
                                             <td>{{ $dataSantri -> aktif }}</td>
-                                            <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
+                                            <td>
+                                                <a href="{{ url('/form-edit-santri-') }} {{ $dataSantri->id }}">
+                                                <div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div>
+                                               </a>
+                                            </td>
+                                            
                                             <form action="{{ url('/delete-santri-') }} {{ $dataSantri->id }}" method="POST">
                                                 @method('delete')
                                                 @csrf

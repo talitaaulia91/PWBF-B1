@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -80,4 +80,39 @@
 
 </body>
 
-</html>
+</html> --}}
+
+
+
+
+@extends('layouts.dashboard')
+
+@section('container')
+
+<body>
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Update Data Peran</h4>
+            <form class="user" action="/update-peran-{{ $peran->id }}"  method="post">
+                @method('put')
+                @csrf
+
+              <div class="form-group">
+                <input type="name" class="form-control"
+                id="exampleInputEmail" name="peran" aria-describedby="emailHelp"
+                value="{{ old('peran', $peran->peran) }}"
+                placeholder="Nama Peran">
+              </div>
+
+              <button type = "submit" class="btn btn-primary">Update</button> 
+              {{-- <button class="btn btn-light">Cancel</button> --}}
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      @endsection
+
+
