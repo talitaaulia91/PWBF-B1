@@ -104,6 +104,9 @@ Route::get('/form-edit-pengurus-{id}', [PengurusController::class, 'edit'])->mid
 Route::put('/update-pengurus-{id}', [PengurusController::class, 'update'])->middleware('auth');
 
 
+
+
+
 //peran
 Route::get('/peran', [PeranController::class, 'peran'])->middleware('auth');
 Route::post('/create-peran', [PeranController::class, 'store'])->middleware('auth');

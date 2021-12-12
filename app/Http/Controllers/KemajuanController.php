@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Santri;
+use App\Models\santri;
 use App\Models\Kemajuan;
 use App\Models\Pengurus;
 use Illuminate\Http\Request;
@@ -17,7 +17,7 @@ class KemajuanController extends Controller
 
         return view('dashboard.show.tabelKemajuan', [
             'kemajuan' => Kemajuan::where('id_santri', $id->id)-> get(),
-            'idSantri' => Santri::find($id),
+            'idSantri' => santri::find($id),
             'pengurus'  => Pengurus::find($id)
             ]);
     }
@@ -25,8 +25,8 @@ class KemajuanController extends Controller
     public function createKemajuan($id)
     {
         return view('dashboard.create.createKemajuan', [
-            'title'     => Santri::find($id)->nama,
-            'idsantri'  => Santri::find($id)->id,
+            'title'     => santri::find($id)->nama,
+            'idsantri'  => santri::find($id)->id,
             'pengurus'  => Pengurus::find($id),
         ]);
     }

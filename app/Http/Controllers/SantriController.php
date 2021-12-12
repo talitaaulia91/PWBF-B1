@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Santri;
+use App\Models\santri;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 class SantriController extends Controller
 {
     public function santri(){
-        $santri = Santri::all();
+        $santri = santri::all();
 
         return view('dashboard.tabelSantri', ['santri' => $santri]);
     }
@@ -21,7 +21,7 @@ class SantriController extends Controller
 
 
     public function kemajuan(){
-        $santri = Santri::all();
+        $santri = santri::all();
         return view('dashboard.tabelKemajuan', ['santri' => $santri]);
     }
 
@@ -29,7 +29,7 @@ class SantriController extends Controller
 
     public function destroy($id)
     {
-        Santri::find($id)->delete();
+        santri::find($id)->delete();
 
         return redirect('/santri')->with('deleteSantri','Delete success!');
     }
@@ -37,7 +37,7 @@ class SantriController extends Controller
 
     public function edit($id){
         return view('dashboard.edit.editSantri',[
-            'santri'  => Santri::find($id),
+            'santri'  => santri::find($id),
             "title"     => Santri::find($id)->santri
         ]);
     }
