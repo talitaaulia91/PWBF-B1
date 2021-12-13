@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Santri;
+use App\Models\santri;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
@@ -30,9 +30,9 @@ class signup extends Controller
 
         $validatedData['password'] = bcrypt($validatedData['password']);
 
-        Santri::create($validatedData);
+        santri::create($validatedData);
 
-        $santri_id = Santri::latest()->first()->id;
+        $santri_id = santri::latest()->first()->id;
 
         DB::table('users')->insert([
             'id_santri'     => $santri_id,
@@ -43,7 +43,7 @@ class signup extends Controller
         ]);
 
     
-        // return redirect('/signin');
+        return redirect('/signin');
     
     }
 }
