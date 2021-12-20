@@ -24,9 +24,14 @@
                                     <tbody>
                                         @foreach ($detail_peran as $dataDK)
                                         <tr>
-                                            <td>{{ $dataDK -> id }}</td>
-                                            <td> </td>
-                                            <td>{{ $dataDK -> status }}</td>
+                                            <td>{{ $dataDK ->id }}</td>
+                                            <td>{{ $dataDK ->pengurus ->nama_pengurus }}</td>
+                                            <td> @if ($dataDK ->pengurus ->aktif == 1)
+                                                Aktif
+                                                @else
+                                                Tidak aktif
+                                                @endif
+                                            </td>
                                             <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
                                             <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Hapus</button></div></td>
                                             

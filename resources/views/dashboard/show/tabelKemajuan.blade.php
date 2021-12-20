@@ -28,10 +28,12 @@
                                     <tbody>
                                         @foreach ($kemajuan as $dataKemajuan)
                                         <tr>
-                                            <td>{{ $dataKemajuan -> id }}</td>
-                                            <td>{{ $dataKemajuan -> tanggal }}</td>
-                                            <td>{{ $dataKemajuan -> status }}</td>
-                                            <td></td>
+                                            <td>{{ $dataKemajuan ->id }}</td>
+                                            <td>{{ $dataKemajuan ->tanggal }}</td>
+                                            <td>{{ $dataKemajuan ->status }}</td>
+                                            <td>{{ $dataKemajuan ->pengurus ->nama_pengurus }}</td>
+
+
                                             <td>  <a href = "{{ url('/show-detail-kemajuan') }}{{ $dataKemajuan->id }}">
                                                 <button class="btn btn-info btn-block" type="submit">Show</button>
                                             </a></td>

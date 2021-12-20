@@ -5,6 +5,7 @@ use App\Http\Controllers\about;
 use App\Http\Controllers\signin;
 use App\Http\Controllers\signup;
 use App\Http\Controllers\dashboard;
+use App\Http\Controllers\profile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BabController;
@@ -127,3 +128,6 @@ Route::delete('/delete-buku-{id}', [BukuController::class, 'destroy'])->middlewa
 Route::get('/form-edit-buku-{id}', [BukuController::class, 'edit'])->middleware('auth');
 Route::put('/update-buku-{id}', [BukuController::class, 'update'])->middleware('auth');
 
+
+
+Route::get('/profile', [Profile::class, 'profile'])->middleware('auth');

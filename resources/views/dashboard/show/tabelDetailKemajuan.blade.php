@@ -21,8 +21,11 @@
                                             <th>ID Kemajuan</th>
                                             <th>Judul Bab</th>  
                                             <th>Keterangan</th>
+                                            @can('adminpengurus')
                                             <th>Edit</th>
-                                            <th>Hapus</th>
+                                            <th>Hapus</th>    
+                                            @endcan
+                                          
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -30,10 +33,15 @@
                                         <tr>
                                             <td>{{ $dataDK -> id }}</td>
                                             <td>{{ $dataDK -> id_kemajuan }}</td>
-                                            <td> </td>
+                                            <td>{{ $dataDK ->bab ->bab }}</td>
                                             <td>{{ $dataDK -> keterangan }}</td>
+
+
+                                            @can('adminpengurus')
                                             <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
-                                            <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Hapus</button></div></td>
+                                            <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Hapus</button></div></td>   
+                                            @endcan
+                                            
                                             
                                         </tr>
                                         @endforeach

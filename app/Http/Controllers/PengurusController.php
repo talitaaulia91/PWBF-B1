@@ -25,6 +25,10 @@ class PengurusController extends Controller
         ]);
     }
 
+
+
+
+    
     public function store(Request $request){
         $validatedData = $request->validate([
             'nama_pengurus' => 'required|min:3|max:50',
@@ -52,6 +56,16 @@ class PengurusController extends Controller
 
         return redirect('/pengurus');
     }
+
+
+
+
+
+
+
+
+
+
 
     public function destroy($id)
     {
