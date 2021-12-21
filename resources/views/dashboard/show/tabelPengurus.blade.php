@@ -2,7 +2,7 @@
 
 @section('container')
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-    <div><button class="btn btn-primary " type="submit">Add</button></div>
+    {{-- <div><button class="btn btn-primary " type="submit">Add</button></div> --}}
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -16,8 +16,7 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Nama pengurus</th>
-                                            <th>Status</th>  
-                                            <th>Edit</th>
+                                            <th>Status</th>                
                                             <th>Hapus</th>
                                         </tr>
                                     </thead>
@@ -32,7 +31,7 @@
                                                 Tidak aktif
                                                 @endif
                                             </td>
-                                            <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
+                                       
                                             <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Hapus</button></div></td>
                                             
                                         </tr>

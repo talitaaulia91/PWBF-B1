@@ -12,24 +12,32 @@ use App\Http\Controllers\Controller;
 
 class KemajuanController extends Controller
 {
-    public function kemajuan(Santri $id){
-        $kemajuan = Kemajuan::all();
 
+
+
+    public function kemajuan(Santri $santri, $id)
+    {
         return view('dashboard.show.tabelKemajuan', [
-            'kemajuan' => Kemajuan::where('id_santri', $id->id)-> get(),
-            'idSantri' => santri::find($id),
-            'pengurus'  => Pengurus::find($id)
-            ]);
+            'kemajuan'  => Kemajuan::where('id_santri', $id)->orderby('tanggal', 'desc')->with('pengurus')->get(),
+            'title'     => Santri::find($id)->nama,
+            'idsantri'  => Santri::find($id)->id,
+            'counter'   => 1
+        ]);
     }
+
+
+
+
 
     public function createKemajuan($id)
     {
         return view('dashboard.create.createKemajuan', [
-            'title'     => santri::find($id)->nama,
-            'idsantri'  => santri::find($id)->id,
-            'pengurus'  => Pengurus::find($id),
+            'santri'   => Santri::find($id),
+            'pengurus' => Pengurus::find($id),
+            "title"    => "Kemajuan"
         ]);
     }
+
 
     /**
      * Store a newly created resource in storage.
