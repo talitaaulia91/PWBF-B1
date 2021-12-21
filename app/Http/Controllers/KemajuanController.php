@@ -62,6 +62,14 @@ class KemajuanController extends Controller
     }
 
 
+    public function destroy($id)
+    {
+        Kemajuan::find($id)->delete();
+
+        return redirect('/kemajuan')->with('delete_kemajuan','Delete success!');
+    }
+
+
 
 
 }

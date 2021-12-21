@@ -18,7 +18,7 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>ID Kemajuan</th>
+                                      
                                             <th>Judul Bab</th>  
                                             <th>Keterangan</th>
                                             @can('adminpengurus')
@@ -32,14 +32,18 @@
                                         @foreach ($detail_kemajuan as $dataDK)
                                         <tr>
                                             <td>{{ $dataDK -> id }}</td>
-                                            <td>{{ $dataDK -> id_kemajuan }}</td>
+                                        
                                             <td>{{ $dataDK ->bab ->bab }}</td>
                                             <td>{{ $dataDK -> keterangan }}</td>
 
 
                                             @can('adminpengurus')
                                             <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
-                                            <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Hapus</button></div></td>   
+                                            <form action="{{ url('/delete-detail-kemajuan-') }} {{ $dataDK->id }}" method="POST">
+                                                @method('delete')
+                                                @csrf
+                                                <td><button class="btn btn-danger btn-block" type="submit">Delete</button></td>     
+                                            </form>  
                                             @endcan
                                             
                                             

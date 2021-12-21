@@ -38,7 +38,11 @@
                                                 <button class="btn btn-info btn-block" type="submit">Show</button>
                                             </a></td>
                                             <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
-                                            <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Hapus</button></div></td>
+                                            <form action="{{ url('/delete-kemajuan-') }} {{ $dataKemajuan->id }}" method="POST">
+                                                @method('delete')
+                                                @csrf
+                                                <td><button class="btn btn-danger btn-block" type="submit">Delete</button></td>     
+                                            </form>  
                                             
                                         </tr>
                                         @endforeach

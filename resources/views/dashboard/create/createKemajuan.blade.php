@@ -20,7 +20,7 @@
               <div class="form-group">
                 <select class="form-control" name="id_pengurus" required>
                     <option value="" disabled selected hidden>Nama Pengurus</option>
-                    <option value="{{ $pengurus ->id }}"> {{ $pengurus->nama_pengurus }}</option>                   
+                    <option value="{{ auth()->user()->id_pengurus }}">{{ auth()->user()->name }}</option>                   
                 </select>
             </div>
 

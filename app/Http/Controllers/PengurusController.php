@@ -58,15 +58,6 @@ class PengurusController extends Controller
     }
 
 
-
-
-
-
-
-
-
-
-
     public function destroy($id)
     {
         Pengurus::find($id)->delete();

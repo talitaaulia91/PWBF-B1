@@ -80,8 +80,11 @@ Route::get('/show-kemajuan{id}', [KemajuanController::class, 'kemajuan'])->middl
 Route::get('/show-detail-kemajuan{id}', [DetailKemajuanController::class, 'index'])->middleware('auth');
 Route::get('/form-create-kemajuan{id}', [KemajuanController::class, 'createKemajuan'])->middleware('auth');
 Route::post('/create-kemajuan', [KemajuanController::class, 'store'])->middleware('auth');
+Route::delete('/delete-kemajuan-{id}', [KemajuanController::class, 'destroy'])->middleware('auth');
 
 
+//detail kemajuan
+Route::delete('/delete-detail-kemajuan-{id}', [DetailKemajuanController::class, 'destroy'])->middleware('auth');
 
 
 
