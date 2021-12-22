@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\santri;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -30,6 +31,7 @@ class SantriController extends Controller
     public function destroy($id)
     {
         santri::find($id)->delete();
+        User::where('id_santri', $id)->delete();
 
         return redirect('/santri')->with('deleteSantri','Delete success!');
     }

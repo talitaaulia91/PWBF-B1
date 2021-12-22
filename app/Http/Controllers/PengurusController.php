@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Pengurus;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -61,6 +62,8 @@ class PengurusController extends Controller
     public function destroy($id)
     {
         Pengurus::find($id)->delete();
+        User::where('id_pengurus', $id)->delete();
+        
 
         return redirect('/pengurus')->with('deletePengurus','Delete success!');
     }

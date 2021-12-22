@@ -2,7 +2,7 @@
 
 @section('container')
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-    @can('adminpengurus')
+    @can('pengurus')
     <div><a href="/form-create-kemajuan{{ $idsantri }}"><button class="btn btn-primary " type="submit">Add</button></div></a>
     @endcan
 
