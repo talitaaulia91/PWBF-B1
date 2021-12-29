@@ -7,6 +7,7 @@ use App\Models\Kemajuan;
 use App\Models\Pengurus;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -60,6 +61,38 @@ class KemajuanController extends Controller
 
         return redirect('/kemajuan');
     }
+
+
+
+    public function edit($id) {
+        return view('dashboard.edit.editKemajuan', [
+            'kemajuan'  => Kemajuan::find($id),
+            "title"     => Kemajuan::find($id)->kemajuan
+        ]);
+    }
+
+
+
+    public function update(Request $request, Kemajuan $kemajuan){
+        DB::table('kemajuan')->where('id',$request->id)->update([
+            'id_pengurus' => $request->id_pengurus,
+            'status'      => $request->status
+        ]);
+
+        return redirect('/kemajuan');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public function destroy($id)

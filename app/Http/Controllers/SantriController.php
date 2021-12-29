@@ -39,7 +39,7 @@ class SantriController extends Controller
 
     public function edit($id){
         return view('dashboard.edit.editSantri',[
-            'santri'  => santri::find($id),
+            'santri'    => santri::find($id),
             "title"     => Santri::find($id)->santri
         ]);
     }

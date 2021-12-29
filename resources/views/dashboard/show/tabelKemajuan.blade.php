@@ -37,7 +37,12 @@
                                             <td>  <a href = "{{ url('/show-detail-kemajuan') }}{{ $dataKemajuan->id }}">
                                                 <button class="btn btn-info btn-block" type="submit">Show</button>
                                             </a></td>
-                                            <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
+                                            <td>
+                                                <a href = "{{ url('/form-edit-kemajuan-') }}{{ $dataKemajuan->id }}">
+                                                    <button class="btn btn-warning btn-block" type="submit">Edit</button>
+                                                </a>
+                                                
+                                            </td>
                                             <form action="{{ url('/delete-kemajuan-') }} {{ $dataKemajuan->id }}" method="POST">
                                                 @method('delete')
                                                 @csrf
