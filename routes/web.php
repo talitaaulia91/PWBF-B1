@@ -89,6 +89,8 @@ Route::put('/update-kemajuan-{id}', [KemajuanController::class, 'update'])->midd
 Route::delete('/delete-detail-kemajuan-{id}', [DetailKemajuanController::class, 'destroy'])->middleware('auth');
 Route::get('/form-edit-detail-kemajuan-{id}', [DetailKemajuanController::class, 'edit'])->middleware('auth');
 Route::put('/update-detail-kemajuan-{id}', [DetailKemajuanController::class, 'update'])->middleware('auth');
+Route::get('/form-create-detail-kemajuan{id}', [DetailKemajuanController::class, 'createDetailKemajuan'])->middleware('auth');
+Route::post('/create-detail-kemajuan', [DetailKemajuanController::class, 'store'])->middleware('auth');
 
 
 

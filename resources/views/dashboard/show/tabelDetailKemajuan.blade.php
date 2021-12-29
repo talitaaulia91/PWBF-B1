@@ -3,7 +3,7 @@
 @section('container')
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
     @can('pengurus')
-    <div><button class="btn btn-primary " type="submit">Add</button></div>
+    <div><a href="/form-create-detail-kemajuan{{ $id }}"><button class="btn btn-primary " type="submit">Add</button></div></a>
     @endcan
    
 
@@ -38,7 +38,12 @@
 
 
                                             @can('adminpengurus')
-                                            <td><div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div></td>
+                                            <td>
+                                                <a href = "{{ url('/form-edit-detail-kemajuan-') }}{{ $dataDK->id }}">
+                                                    <button class="btn btn-warning btn-block" type="submit">Edit</button>
+                                                </a>
+                                                
+                                            </td>
                                             <form action="{{ url('/delete-detail-kemajuan-') }} {{ $dataDK->id }}" method="POST">
                                                 @method('delete')
                                                 @csrf
