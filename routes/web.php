@@ -74,6 +74,8 @@ Route::delete('/delete-santri-{id}', [SantriController::class, 'destroy'])->midd
 
 
 
+
+
 //kemajuan
 Route::get('/kemajuan', [SantriController::class, 'kemajuan'])->middleware('auth');
 Route::get('/show-kemajuan{id}', [KemajuanController::class, 'kemajuan'])->middleware('auth');

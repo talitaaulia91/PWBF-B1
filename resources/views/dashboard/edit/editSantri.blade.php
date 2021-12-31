@@ -7,7 +7,7 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Update Data Santri</h4>
-            <form class="user" action="/update-santri-{{ $santri->id }}"  method="post">
+            <form class="user" action="/update-santri-{{ $santri->id }}"  method="post" enctype="multipart/form-data"              >
                 @method('put')
                 @csrf
 
@@ -54,6 +54,18 @@
                 <input type="password" name="password" class="form-control"
                 id="exampleInputPassword" placeholder="Password">
               </div>
+
+              <div class="form-group">
+                <label for="image" class="form-label">upload foto</label>
+                <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image">
+                @error('image')
+  
+                                      <div class="invalid-feedback text-danger">
+                                        {{ $message }}
+                                    </div>
+                                  @enderror
+                 </div>
+  
 
               <button type = "submit" class="btn btn-primary">Update</button> 
             </form>
