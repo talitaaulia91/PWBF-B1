@@ -37,6 +37,8 @@ class PengurusController extends Controller
             'hp'            => 'required',
             'email'         => 'required|email:dns',
             'password'      => 'required||min:8|max:32',
+            'image'         => 'image|file|max:1024',
+
         ]);
 
         $validatedData['password'] = bcrypt($validatedData['password']);
@@ -78,17 +80,27 @@ class PengurusController extends Controller
 
 
     public function update(Request $request, Pengurus $pengurus){
+        $role = auth()->user()->role;
+
+
         $validatedData = $request->validate([
             'nama_pengurus' => 'required|min:3|max:50',
             'hp'            => 'required',
             'email'         => 'required|email:dns',
-            'password'      => 'required||min:8|max:32',
+            'password'      => 'required||min:8|max:32'
         ]);
+
+
+
+
+
         DB::table('pengurus')->where('id', $request->id)->update([
             'nama_pengurus' => $request->nama_pengurus,
             'hp'            => $request->hp,
             'email'         => $request->email,
-            'password'      => Hash::make($request->newPassword)
+            'password'      => Hash::make($request->newPassword),
+           
+
         ]);
 
         return redirect('/pengurus');

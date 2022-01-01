@@ -19,6 +19,7 @@
                                             <th>No hp</th>
                                             <th>Email</th>                                         
                                             <th>Status</th>
+                                            <th>add peran</th>
                                             <th>Edit</th>
                                             <th>Hapus</th>
                                         </tr>
@@ -37,6 +38,11 @@
                                                 @else
                                                     Tidak Aktif
                                                 @endif
+                                            </td>
+                                            <td>
+                                                <a href="/form-create-detail-peran{{ $dataPengurus->id }}">
+                                                <div class="d-grid"><button class="btn btn-info btn-block" type="submit">Add</button></div>
+                                               </a>
                                             </td>
                                             <td>
                                                 <a href="{{ url('/form-edit-pengurus-') }} {{ $dataPengurus->id }}">

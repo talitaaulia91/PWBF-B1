@@ -21,18 +21,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($detail_peran as $dataDK)
+                                        @foreach ($detail_peran as $dataDP)
                                         <tr>
-                                            <td>{{ $dataDK ->id }}</td>
-                                            <td>{{ $dataDK ->pengurus ->nama_pengurus }}</td>
-                                            <td> @if ($dataDK ->pengurus ->aktif == 1)
+                                            <td>{{ $dataDP ->id }}</td>
+                                            <td>{{ $dataDP ->pengurus ->nama_pengurus }}</td>
+                                            <td> @if ($dataDP ->pengurus ->aktif == 1)
                                                 Aktif
                                                 @else
                                                 Tidak aktif
                                                 @endif
                                             </td>
                                        
-                                            <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Hapus</button></div></td>
+                                            <form action="{{ url('/delete-detail-peran-') }} {{ $dataDP->id }}" method="POST">
+                                                @method('delete')
+                                                @csrf
+                                                <td><button class="btn btn-danger btn-block" type="submit">Delete</button></td>     
+                                            </form>  
                                             
                                         </tr>
                                         @endforeach

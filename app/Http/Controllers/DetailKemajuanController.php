@@ -26,9 +26,9 @@ class DetailKemajuanController extends Controller
     public function createDetailKemajuan($id)
     {
         return view('dashboard.create.createDetailKemajuan', [
+            'bab'        => Bab::all(),
             'kemajuan'   => Kemajuan::find($id),
-            'bab'        => Bab::find($id),
-            "title"      => "detail kemajuan"
+            "title"      => $id
         ]);
     }
 
@@ -56,7 +56,9 @@ class DetailKemajuanController extends Controller
     public function edit($id) {
         return view('dashboard.edit.editDetailKemajuan', [
             'detail_kemajuan'  => Detail_kemajuan::find($id),
-            "title"           => Detail_kemajuan::find($id)->detail_kemajuan
+            'bab'              => Bab::all(),
+            "title"            => $id
+           
         ]);
     }
 
@@ -66,6 +68,7 @@ class DetailKemajuanController extends Controller
 
     public function update(Request $request, Detail_kemajuan $detail_kemajuan){
         DB::table('detail_kemajuan')->where('id',$request->id)->update([
+            'id_bab'          => $request->id_bab,
             'keterangan'      => $request->keterangan
         ]);
 

@@ -13,9 +13,12 @@
 
 
                 <div class="form-group">
-                  <input type="name" class="form-control"
-                  id="exampleInputEmail" name="id_bab" aria-describedby="emailHelp" value="{{ old('id_bab', $detail_kemajuan ->id_bab) }}"
-                  placeholder="Judul">
+                  <select class="form-control" name="id_bab" required>
+                    @foreach ($bab as $dataBab)
+                      <option value="" disabled selected hidden>Bab</option>
+                      <option value="{{ $dataBab->id }}"> {{ $dataBab->judul }}</option> 
+                      @endforeach                  
+                  </select>
               </div>
 
 

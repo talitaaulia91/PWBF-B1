@@ -7,27 +7,39 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Tambah Data Detail Kemajuan</h4>
-            <form action="/create-kemajuan" method="post">
+            <form action="/create-detail-kemajuan" method="post">
                 @csrf
 
-                <div class="form-group">
-                  <select class="form-control" name="id_bab" required>
-                      <option value="" disabled selected hidden>Judul Buku</option>
-                      <option value="{{ $bab->id }}"> {{ $bab->judul }}</option>               
-                  </select>
-              </div>
 
               <div class="form-group">
-                <select class="form-control" name="id_kemajuan" required>
-                    <option value="" disabled selected hidden>Kemajuan</option>
-                    <option value="{{ $kemajuan->id }}"> {{ $kemajuan->id }}</option>                   
+                <select class="form-control" name="id_bab" required>
+                  @foreach ($bab as $dataBab)
+                    <option value="" disabled selected hidden>Bab</option>
+                    <option value="{{ $dataBab->id }}"> {{ $dataBab->judul }}</option> 
+                    @endforeach                  
                 </select>
             </div>
 
+            <div class="form-group">
+              <input type="text" class="form-control" hidden name="id_kemajuan" value="{{ $title }}">
+
+              @error('Keterangan')
+              <div class="invalid-feedback">
+              {{ $message }}
+              </div>
+              @enderror
+
+          </div>
+
 
             <div class="form-group">
-              <textarea rows="5" class="form-control @error('keterangan') is-invalid @enderror" 
-              name="keterangan" placeholder="Keterangan" required></textarea>
+              <textarea rows="5" class="form-control @error('keterangan') is-invalid @enderror" name="keterangan" placeholder="Keterangan" required></textarea>
+              @error('Keterangan')
+              <div class="invalid-feedback">
+              {{ $message }}
+              </div>
+              @enderror
+
           </div>
 
 

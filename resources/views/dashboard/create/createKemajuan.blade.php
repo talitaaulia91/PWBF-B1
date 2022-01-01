@@ -30,9 +30,13 @@
                 </div>
 
               <div class="form-group">
-                  <input type="name" class="form-control"
-                      id="exampleInputEmail" name="status" aria-describedby="emailHelp"
-                      placeholder="Status">
+                <select class="form-control @error('status') is-invalid @enderror" name="status" required>
+                  <option value="" disabled selected hidden>Status</option>
+                  <option value="naik">Naik</option>
+                  <option value="tetap">Tetap</option>
+                  <option value="turun">Turun</option>
+              </select>
+
               </div>
 
 

@@ -9,6 +9,7 @@ class Detail_peran extends Model
 {
     use HasFactory;
    protected $table = 'detail_peran';
+   protected $guarded = ['id'];
 
    public function pengurus(){
     return $this->belongsTo('App\Models\Pengurus', 'id_pengurus');

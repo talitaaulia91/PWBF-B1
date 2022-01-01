@@ -148,22 +148,13 @@
       <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('../assets/img/curved-images/curved0.jpg'); background-position-y: 50%;">
         <span class="mask bg-gradient-primary opacity-6"></span>
       </div>
-      <div class="card card-body blur shadow-blur mx-4 mt-n6 overflow-hidden">
+      <div class="card card-body blur shadow-blur mx-4  mt-n6 overflow-hidden" >
         <div class="row gx-4">
-          <div class="col-auto">
-            
-           
-            
-
-            {{-- @foreach($santri as $dataSantri) --}}
+          <div class="col-auto mt-4">
 
             <div class="avatar avatar-xl position-relative">
               <img src="uploads/{{ $santri->image }}" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
             </div>
-          
-            {{-- @endforeach
-           
-             --}}
           </div>
           <div class="col-auto my-auto">
             <div class="h-100">
@@ -175,9 +166,6 @@
               </p>
             </div>
           </div>
-
-
-          
           <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
             <div class="nav-wrapper position-relative end-0">
               <ul class="nav nav-pills nav-fill p-1 bg-transparent" role="tablist">
@@ -186,7 +174,7 @@
                   <a href="{{ url('/form-edit-santri-') }}   {{ auth()->user()->id_santri }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                      Edit profil</a>
               </div>
-          
+
               </ul>
             </div>
           </div>

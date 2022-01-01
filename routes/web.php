@@ -127,6 +127,9 @@ Route::delete('/delete-peran-{id}', [PeranController::class, 'destroy'])->middle
 Route::get('/form-edit-peran-{id}', [PeranController::class, 'edit'])->middleware('auth');
 Route::put('/update-peran-{id}', [PeranController::class, 'update'])->middleware('auth');
 Route::get('/show-pengurus{id}', [DetailPeranController::class, 'index'])->middleware('auth');
+Route::get('/form-create-detail-peran{id}', [DetailPeranController::class, 'createDetailPeran'])->middleware('auth');
+Route::post('/create-detail-peran', [DetailPeranController::class, 'store'])->middleware('auth');
+Route::delete('/delete-detail-peran-{id}', [DetailPeranController::class, 'destroy'])->middleware('auth');
 
 
 
