@@ -57,17 +57,17 @@ class SantriController extends Controller
             'hp'            => 'required',
             'email'         => 'required|email:dns',
             'password'      => 'required||min:8|max:32',
-            'image'         => 'image|file|max:1024',
+            // 'image'         => 'image|file|max:1024',
 
         ]);
 
-        $file = $request->file('image');
-        $target_dir = "uploads/"; //lokasi
-        $target_file = $target_dir . basename($_FILES["image"]["name"]); //tempat lokasi
+        // $file = $request->file('image');
+        // $target_dir = "uploads/"; //lokasi
+        // $target_file = $target_dir . basename($_FILES["image"]["name"]); //tempat lokasi
         
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-        //function pemindahan file
-        $file->move($target_dir,$file->getClientOriginalName());
+        // $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        // //function pemindahan file
+        // $file->move($target_dir,$file->getClientOriginalName());
 
 
 
@@ -80,7 +80,7 @@ class SantriController extends Controller
             'hp'            => $request->hp,
             'email'         => $request->email,
             'password'      => Hash::make($request->newPassword),
-            'image'         => basename($_FILES["image"]["name"]),
+            // 'image'         => basename($_FILES["image"]["name"]),
 
         ]);
 

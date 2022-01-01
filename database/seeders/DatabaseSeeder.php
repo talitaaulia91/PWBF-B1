@@ -27,14 +27,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
  
-        Santri::factory(25) -> create();
-        Peran::factory(10) -> create();
-        Pengurus::factory(25) -> create();
-        Buku::factory(50) -> create();
-        Bab::factory(20) -> create();
-        Kemajuan::factory(50) -> create();
-        Detail_kemajuan::factory(300) -> create();
-        Detail_peran::factory(80) -> create();
+        // Santri::factory(25) -> create();
+        // Peran::factory(10) -> create();
+        // Pengurus::factory(25) -> create();
+        // Buku::factory(50) -> create();
+        // Bab::factory(20) -> create();
+        // Kemajuan::factory(50) -> create();
+        // Detail_kemajuan::factory(300) -> create();
+        // Detail_peran::factory(80) -> create();
         User::factory(1) -> create();
         
     }

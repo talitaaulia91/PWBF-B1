@@ -50,6 +50,8 @@ Route::get('/about', [about::class, 'about']);
 //signup
 Route::get('/signup', [signup::class, 'signup']);
 Route::post('/signup', [signup::class, 'store']);
+Route::post('/upload-photo-profil-{id}', [signup::class, 'update']);
+
 
 
 

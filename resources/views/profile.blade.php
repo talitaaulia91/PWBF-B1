@@ -153,9 +153,28 @@
           <div class="col-auto mt-4">
 
             <div class="avatar avatar-xl position-relative">
-              <img src="uploads/{{ $santri->image }}" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+              @if (auth()->user()->image)
+              <img src="{{ asset('uploads/'.auth()->user()->image) }}" class="w-100 border-radius-lg shadow-sm">
+            @else
+              <img src="img/unnamed.jpg" alt="Profile">   
+  
+  
+            @endif
             </div>
+
+          
+
+
+
+
           </div>
+
+
+ 
+
+
+
+
           <div class="col-auto my-auto">
             <div class="h-100">
               <h5 class="mb-1">
@@ -170,10 +189,33 @@
             <div class="nav-wrapper position-relative end-0">
               <ul class="nav nav-pills nav-fill p-1 bg-transparent" role="tablist">
  
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                  <a href="{{ url('/form-edit-santri-') }}   {{ auth()->user()->id_santri }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                     Edit profil</a>
-              </div>
+  
+
+                 <form action="/upload-photo-profil-{{ auth()->user()->id }}" method="post" enctype="multipart/form-data">
+                  @csrf
+                  <input type="hidden" name="oldImage" id="oldImage" value="{{ auth()->user()->image }}">
+             
+                    <div class="col-md-8 col-lg-9">
+                      <div class="pt-2">
+                        <div class="mb-3">
+                          <label for="image" class="form-label">Upload Foto</label><br/>
+                          {{-- <img class="img-preview img-fluid mb-3 col-sm-5">   --}}
+                          <input class="form-control" type="file" id="image" name="image" onchange="previewImage()">
+                          <button type="submit" class="btn btn-primary mt-2">Save Changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div >
+             
+                  </div>
+
+
+
+
+
+
+
 
               </ul>
             </div>

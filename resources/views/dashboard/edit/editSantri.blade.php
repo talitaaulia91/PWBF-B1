@@ -55,16 +55,7 @@
                 id="exampleInputPassword" placeholder="Password">
               </div>
 
-              <div class="form-group">
-                <label for="image" class="form-label">upload foto</label>
-                <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image">
-                @error('image')
-  
-                                      <div class="invalid-feedback text-danger">
-                                        {{ $message }}
-                                    </div>
-                                  @enderror
-                 </div>
+ 
   
 
               <button type = "submit" class="btn btn-primary">Update</button> 
