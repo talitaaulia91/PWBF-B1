@@ -167,8 +167,8 @@
                                     {{ auth()->user()->name }}
                                 </span>
                                   
-                                <img class="img-profile rounded-circle"
-                                    src="assets/img/testimonials/boy1-01.png">
+                                {{-- <img class="img-profile rounded"
+                                    src="{{ asset('uploads/'.auth()->user()->image) }}"> --}}
                                 
                             </a>
                             <!-- Dropdown - User Information -->

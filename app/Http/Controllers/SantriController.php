@@ -46,8 +46,7 @@ class SantriController extends Controller
 
 
     public function update(Request $request, Santri $santri){
-        $role = auth()->user()->role;
-
+   
 
         $validatedData = $request->validate([
             'name'          => 'required|min:3|max:50',
@@ -57,19 +56,9 @@ class SantriController extends Controller
             'hp'            => 'required',
             'email'         => 'required|email:dns',
             'password'      => 'required||min:8|max:32',
-            // 'image'         => 'image|file|max:1024',
+          
 
         ]);
-
-        // $file = $request->file('image');
-        // $target_dir = "uploads/"; //lokasi
-        // $target_file = $target_dir . basename($_FILES["image"]["name"]); //tempat lokasi
-        
-        // $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-        // //function pemindahan file
-        // $file->move($target_dir,$file->getClientOriginalName());
-
-
 
 
         DB::table('santri')->where('id', $request->id)->update([
@@ -80,14 +69,11 @@ class SantriController extends Controller
             'hp'            => $request->hp,
             'email'         => $request->email,
             'password'      => Hash::make($request->newPassword),
-            // 'image'         => basename($_FILES["image"]["name"]),
 
         ]);
 
-        if($role == "Admin" || $role == "Pengurus"){
         return redirect('/santri');
-        }
-        return redirect('/profile');
+      
 
     }
 

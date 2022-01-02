@@ -25,7 +25,6 @@
                                             <th>Email</th>                                         
                                             <th>Tanggal masuk</th>
                                             <th>Aktif</th>
-                                            <th>Foto</th>
                                             <th>Edit</th>
                                             <th>Hapus</th>
                                             
@@ -45,7 +44,6 @@
                                             <td>{{ $dataSantri -> email }}</td>
                                             <td>{{ $dataSantri -> tgl_masuk }}</td>
                                             <td>{{ $dataSantri -> aktif }}</td>
-                                            <td><img src="uploads/{{ $dataSantri->image }}" style="width: 50px;"></td>
 
                                             <td>
                                                 <a href="{{ url('/form-edit-santri-') }} {{ $dataSantri->id }}">
