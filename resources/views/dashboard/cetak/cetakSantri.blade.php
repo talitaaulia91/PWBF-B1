@@ -32,8 +32,6 @@
                             <th>Email</th>                                         
                             <th>Tanggal masuk</th>
                             <th>Aktif</th>
-                            <th>Edit</th>
-                            <th>Hapus</th>
                             
                         </tr>
                     </thead>
@@ -52,17 +50,6 @@
                             <td>{{ $dataSantri -> tgl_masuk }}</td>
                             <td>{{ $dataSantri -> aktif }}</td>
 
-                            <td>
-                                <a href="{{ url('/form-edit-santri-') }} {{ $dataSantri->id }}">
-                                <div class="d-grid"><button class="btn btn-warning btn-block" type="submit">Edit</button></div>
-                               </a>
-                            </td>
-                            
-                            <form action="{{ url('/delete-santri-') }} {{ $dataSantri->id }}" method="POST">
-                                @method('delete')
-                                @csrf
-                                <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Delete</button></div></td>     
-                            </form> 
                         </tr>
                         @endforeach
                     </tbody>
