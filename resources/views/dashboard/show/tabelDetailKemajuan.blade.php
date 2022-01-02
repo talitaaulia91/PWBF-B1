@@ -33,7 +33,7 @@
                                         <tr>
                                             <td>{{ $dataDK -> id }}</td>
                                         
-                                            <td>{{ $dataDK ->bab ->bab }}</td>
+                                            <td>{{ $dataDK ->bab ->judul }}</td>
                                             <td>{{ $dataDK -> keterangan }}</td>
 
 
