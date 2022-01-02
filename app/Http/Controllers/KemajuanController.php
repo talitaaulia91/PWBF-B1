@@ -16,12 +16,12 @@ class KemajuanController extends Controller
 
 
 
-    public function kemajuan(Santri $santri, $id)
+    public function kemajuan(santri $santri, $id)
     {
         return view('dashboard.show.tabelKemajuan', [
             'kemajuan'  => Kemajuan::where('id_santri', $id)->orderby('tanggal', 'desc')->with('pengurus')->get(),
-            'title'     => Santri::find($id)->nama,
-            'idsantri'  => Santri::find($id)->id,
+            'title'     => santri::find($id)->nama,
+            'idsantri'  => santri::find($id)->id,
             'counter'   => 1
         ]);
     }
@@ -33,7 +33,7 @@ class KemajuanController extends Controller
     public function createKemajuan($id)
     {
         return view('dashboard.create.createKemajuan', [
-            'santri'   => Santri::find($id),
+            'santri'   => santri::find($id),
             'pengurus' => Pengurus::find($id),
             "title"    => "Kemajuan"
         ]);
@@ -81,17 +81,6 @@ class KemajuanController extends Controller
 
         return redirect('/kemajuan');
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
