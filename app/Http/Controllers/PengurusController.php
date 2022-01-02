@@ -19,6 +19,13 @@ class PengurusController extends Controller
     }
 
 
+    public function cetak(){
+        $pengurus = Pengurus::all();
+
+        return view('dashboard.cetak.cetakPengurus', ['pengurus' => $pengurus]);
+    }
+
+
     public function createPengurus()
     {
         return view('dashboard.create.createPengurus', [

@@ -19,6 +19,12 @@ class SantriController extends Controller
         return view('dashboard.tabelSantri', ['santri' => $santri]);
     }
 
+    public function cetak(){
+        $santri = santri::all();
+
+        return view('dashboard.cetak.cetakSantri', ['santri' => $santri]);
+    }
+
 
 
     public function kemajuan(){

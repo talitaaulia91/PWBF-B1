@@ -68,6 +68,7 @@ Route::get('/dashboard', [dashboard::class, 'dashboard'])->middleware('auth');
 
 
 //santri
+Route::get('/cetak-santri', [SantriController::class, 'cetak'])->middleware('auth');
 Route::get('/santri', [SantriController::class, 'santri'])->middleware('auth');
 Route::get('/form-edit-santri-{id}', [SantriController::class, 'edit'])->middleware('auth');
 Route::put('/update-santri-{id}', [SantriController::class, 'update'])->middleware('auth');
@@ -110,6 +111,7 @@ Route::put('/update-bab-{id}', [BabController::class, 'update'])->middleware('au
 
 
 //pengurus
+Route::get('/cetak-pengurus', [PengurusController::class, 'cetak'])->middleware('auth');
 Route::get('/pengurus', [PengurusController::class, 'pengurus'])->middleware('auth');
 Route::post('/create-pengurus', [PengurusController::class, 'store'])->middleware('auth');
 Route::get('/form-create-pengurus', [PengurusController::class, 'createPengurus'])->middleware('auth');
