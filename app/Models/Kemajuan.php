@@ -12,7 +12,7 @@ class Kemajuan extends Model
    protected $guarded = ['id'];
 
    public function santri(){
-    return $this->belongsTo('App\Models\Santri', 'id_santri');
+    return $this->belongsTo('App\Models\santri', 'id_santri');
 }
 
 public function pengurus(){
